@@ -48,6 +48,7 @@ function getArg(name, defaultValue = null) {
 const isPreview = args.includes('--preview');
 const customDateStr = getArg('date', null);
 const customTheme = getArg('theme', null);
+const customLayout = getArg('layout', null);
 const customDistrict = getArg('district', 'dhaka');
 const hijriOffset = parseInt(getArg('hijri-offset', '0'), 10) || 0;
 
@@ -56,7 +57,6 @@ let targetDate = new Date();
 if (customDateStr) {
   targetDate = new Date(`${customDateStr}T06:00:00+06:00`);
 } else {
-  // Current time in Dhaka
   const dhakaFormatter = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Asia/Dhaka',
     year: 'numeric',
@@ -67,13 +67,22 @@ if (customDateStr) {
   targetDate = new Date(`${todayStr}T06:00:00+06:00`);
 }
 
-// ── 4. Theme Selection (Auto Rotation or Forced) ──
-const themeKeys = Object.keys(RoyalTodayCard.THEMES);
+// ── 4. Theme & Layout Selection (Auto Rotation or Forced) ──
+const themeKeys = RoyalTodayCard.THEME_KEYS;
+const layoutKeys = RoyalTodayCard.LAYOUT_KEYS;
+
+// Day of year calculation for smart cycling
+const startOfYear = new Date(targetDate.getFullYear(), 0, 1);
+const dayOfYear = Math.floor((targetDate - startOfYear) / (24 * 60 * 60 * 1000));
+
 let selectedTheme = customTheme;
 if (!selectedTheme || !RoyalTodayCard.THEMES[selectedTheme]) {
-  // Day of year or day of week rotation
-  const dayIndex = targetDate.getDay();
-  selectedTheme = themeKeys[dayIndex % themeKeys.length];
+  selectedTheme = themeKeys[dayOfYear % themeKeys.length];
+}
+
+let selectedLayout = customLayout;
+if (!selectedLayout || !RoyalTodayCard.LAYOUTS[selectedLayout]) {
+  selectedLayout = layoutKeys[dayOfYear % layoutKeys.length];
 }
 
 // ── 5. Calculate Daily Bundle ──
@@ -90,14 +99,18 @@ console.log(`🌾 বঙ্গাব্দ:        ${dailyData.bangla.formattedT
 console.log(`🌙 হিজরী:          ${dailyData.hijri.formattedText}`);
 console.log(`☀️  সূর্য ও জ্যোতির্বিজ্ঞান: ${dailyData.sun.formattedLine}`);
 console.log(`🍂 ঋতু:            ${dailyData.bangla.seasonLine}`);
-console.log(`🎨 থিম:            ${RoyalTodayCard.THEMES[selectedTheme].name}`);
+console.log(`🎨 থিম (১০টি):      ${RoyalTodayCard.THEMES[selectedTheme].name}`);
+console.log(`🖼️  লেআউট (২০টি):   ${RoyalTodayCard.LAYOUTS[selectedLayout].name}`);
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
 // ── 6. Canvas 1080x1080 Rendering ──
 const canvas = createCanvas(1080, 1080);
 const ctx = canvas.getContext('2d');
 
-RoyalTodayCard.render(ctx, dailyData, { theme: selectedTheme });
+RoyalTodayCard.render(ctx, dailyData, {
+  theme: selectedTheme,
+  layout: selectedLayout
+});
 
 // ── 7. Output Files ──
 const cardsDir = path.join(rootDir, 'cards');
@@ -131,6 +144,8 @@ const jsonPayload = {
   sun: dailyData.sun,
   theme: selectedTheme,
   themeName: RoyalTodayCard.THEMES[selectedTheme].name,
+  layout: selectedLayout,
+  layoutName: RoyalTodayCard.LAYOUTS[selectedLayout].name,
   caption: dailyData.caption,
   imageUrl: 'https://royal-technologies.github.io/Royal-Today/cards/today.png',
   archiveUrl: `https://royal-technologies.github.io/Royal-Today/cards/${archiveFilename}`,

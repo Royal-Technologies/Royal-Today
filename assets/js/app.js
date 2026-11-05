@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const state = {
     date: new Date(),
     district: 'dhaka',
-    theme: 'sunrise-gold',
+    theme: 'royal-emerald',
+    layout: 'mihrab-arch',
     hijriOffset: 0
   };
 
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dateInput = document.getElementById('dateInput');
   const districtSelect = document.getElementById('districtSelect');
   const themeSelect = document.getElementById('themeSelect');
+  const layoutSelect = document.getElementById('layoutSelect');
   const hijriOffsetSelect = document.getElementById('hijriOffsetSelect');
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const liveClockEl = document.getElementById('liveClock');
@@ -104,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (showcaseSunset) showcaseSunset.textContent = data.sun.sunsetBn;
     if (showcaseSeason) showcaseSeason.textContent = `🍂 ${data.bangla.seasonLine}`;
 
-    if (previewThemeLabel && window.RoyalTodayCard.THEMES[state.theme]) {
-      previewThemeLabel.textContent = window.RoyalTodayCard.THEMES[state.theme].name;
+    if (previewThemeLabel && window.RoyalTodayCard.THEMES[state.theme] && window.RoyalTodayCard.LAYOUTS[state.layout]) {
+      previewThemeLabel.textContent = `${window.RoyalTodayCard.THEMES[state.theme].name} • ${window.RoyalTodayCard.LAYOUTS[state.layout].name}`;
     }
 
     if (captionPreviewText) {
@@ -113,7 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Render Canvas
-    window.RoyalTodayCard.render(ctx, data, { theme: state.theme });
+    window.RoyalTodayCard.render(ctx, data, {
+      theme: state.theme,
+      layout: state.layout
+    });
   }
 
   // ── 6. Event Listeners ──
@@ -137,6 +142,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeSelect) {
     themeSelect.addEventListener('change', (e) => {
       state.theme = e.target.value;
+      updateUI();
+    });
+  }
+
+  if (layoutSelect) {
+    layoutSelect.addEventListener('change', (e) => {
+      state.layout = e.target.value;
       updateUI();
     });
   }
