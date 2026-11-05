@@ -1,0 +1,570 @@
+/* ============================================================
+   Royal Today — Web UI Stylesheet
+   Brand: Royal Today — আজকের দিন, আজকের তথ্য
+   Credits: Royal Technologies (https://www.royaltechbd.com/)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #d97706;
+  --primary-hover: #b45309;
+  --gold: #f59e0b;
+  --gold-light: #fef3c7;
+  --gold-glow: rgba(245, 158, 11, 0.25);
+  
+  --bg: #090e17;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #152238 0%, #090e17 80%);
+  --card-bg: rgba(17, 26, 43, 0.75);
+  --card-border: rgba(245, 158, 11, 0.25);
+  --card-hover: rgba(23, 36, 61, 0.9);
+  
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-accent: #fcd34d;
+  
+  --soft-bg: rgba(255, 255, 255, 0.04);
+  --badge-bg: rgba(245, 158, 11, 0.12);
+  --badge-border: rgba(245, 158, 11, 0.35);
+  
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light {
+  --bg: #f8fafc;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #fef3c7 0%, #f8fafc 70%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(217, 119, 6, 0.25);
+  --card-hover: #ffffff;
+  
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-accent: #b45309;
+  
+  --soft-bg: rgba(0, 0, 0, 0.03);
+  --badge-bg: rgba(217, 119, 6, 0.08);
+  --badge-border: rgba(217, 119, 6, 0.3);
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* ── Top Navbar ── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(9, 14, 23, 0.85);
+  border-bottom: 1px solid var(--card-border);
+  padding: 12px 0;
+}
+
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 12px var(--gold-glow);
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.brand-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle-btn, .btn-ghost {
+  background: var(--soft-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.theme-toggle-btn:hover, .btn-ghost:hover {
+  background: var(--badge-bg);
+  border-color: var(--gold);
+}
+
+/* ── Hero / Top Greeting Banner ── */
+.hero-greeting {
+  text-align: center;
+  padding: 36px 0 24px;
+}
+
+.greeting-salam {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  margin-bottom: 6px;
+}
+
+.greeting-badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--gold);
+  padding: 4px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.greeting-day {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* ── Main Grid Layout ── */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  margin: 24px 0 60px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Left Column: Live Details & Tri-Calendar ── */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.card-header-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.card-header-title h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tri-Calendar Cards */
+.tri-calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.calendar-pill {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--soft-bg);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  transition: var(--transition);
+}
+
+.calendar-pill:hover {
+  background: var(--card-hover);
+  border-color: var(--gold);
+  transform: translateX(4px);
+}
+
+.pill-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.pill-content {
+  flex-grow: 1;
+}
+
+.pill-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pill-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+/* Sun & Season Box */
+.sun-season-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 520px) {
+  .sun-season-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sun-stat-card {
+  background: var(--soft-bg);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+}
+
+.sun-stat-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.sun-stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.sun-stat-time {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-accent);
+}
+
+.season-banner {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.15));
+  border: 1px solid var(--badge-border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Blessings Box */
+.blessings-card {
+  text-align: center;
+  background: linear-gradient(180deg, var(--card-bg) 0%, rgba(245, 158, 11, 0.05) 100%);
+}
+
+.blessings-card p {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.blessings-card p.highlight {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  margin-top: 10px;
+}
+
+/* Interactive Controls: Date Picker & District */
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+@media (max-width: 520px) {
+  .controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-input, .form-select {
+  background: var(--soft-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--gold);
+  background: var(--card-hover);
+}
+
+/* ── Right Column: 1080x1080 Card Preview & Actions ── */
+.preview-section {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.canvas-preview-wrapper {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.canvas-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: #000;
+  position: relative;
+}
+
+.canvas-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Action Buttons Grid */
+.actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--gold-glow);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #fbbf24, #b45309);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--soft-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--badge-bg);
+  border-color: var(--gold);
+}
+
+.btn-full {
+  grid-column: 1 / -1;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #10b981;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ── Footer ── */
+.site-footer {
+  margin-top: auto;
+  background: rgba(9, 14, 23, 0.9);
+  border-top: 1px solid var(--card-border);
+  padding: 32px 0 24px;
+  text-align: center;
+}
+
+body.light .site-footer {
+  background: #f1f5f9;
+}
+
+.footer-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.footer-credits {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-credits a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-credits a:hover {
+  text-decoration: underline;
+}

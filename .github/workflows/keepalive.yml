@@ -1,0 +1,26 @@
+name: GitHub Actions Keepalive
+
+on:
+  schedule:
+    # Runs weekly on Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Keepalive Touch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > .keepalive
+          git add .keepalive
+          git commit -m "chore: keepalive cron trigger to prevent 60-day lapse [skip ci]" || echo "No change"
+          git push origin main || echo "Push skipped"

@@ -1,0 +1,34 @@
+{
+  "name": "royal-today",
+  "version": "1.0.0",
+  "description": "Royal Today — আজকের দিন, আজকের তথ্য | ত্রয়ী ক্যালেন্ডার (বাংলা, ইংরেজী, আরবী) ও সূর্যোদয়-সূর্যাস্ত | Royal Technologies",
+  "main": "index.html",
+  "scripts": {
+    "generate": "node scripts/generate-today.js",
+    "test": "node scripts/generate-today.js --preview"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.13"
+  },
+  "optionalDependencies": {
+    "@napi-rs/canvas-linux-x64-gnu": "^1.0.13",
+    "@napi-rs/canvas-linux-x64-musl": "^1.0.13",
+    "@napi-rs/canvas-darwin-x64": "^1.0.13",
+    "@napi-rs/canvas-darwin-arm64": "^1.0.13",
+    "@napi-rs/canvas-linux-arm64-gnu": "^1.0.13",
+    "@napi-rs/canvas-linux-arm64-musl": "^1.0.13"
+  },
+  "keywords": [
+    "royal-today",
+    "bangla-calendar",
+    "hijri-calendar",
+    "gregorian-calendar",
+    "sunrise-sunset",
+    "dhaka",
+    "bangladesh",
+    "card-generator",
+    "royal-technologies"
+  ],
+  "author": "Royal Technologies (https://www.royaltechbd.com/)",
+  "license": "MIT"
+}

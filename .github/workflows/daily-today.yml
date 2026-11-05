@@ -1,0 +1,45 @@
+name: Royal Today - Daily Card Generator
+
+on:
+  schedule:
+    # Runs at 18:00 UTC daily = 00:00 BST (Bangladesh Standard Time Midnight)
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: |
+          npm install
+
+      - name: Generate Today's Card & Metadata
+        run: |
+          npm run generate
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add cards/
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(auto): update Royal Today card for $(date +'%Y-%m-%d') [skip ci]"
+            git push origin main
+          fi

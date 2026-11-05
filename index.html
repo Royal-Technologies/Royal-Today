@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Today — আজকের দিন, আজকের তথ্য | ত্রয়ী ক্যালেন্ডার ও সূর্যোদয়-সূর্যাস্ত</title>
+  
+  <meta name="description" content="Royal Today — আজকের বাংলা, ইংরেজি ও হিজরি ক্যালেন্ডার, সূর্যোদয় ও সূর্যাস্তের সময়সূচি এবং সোশ্যাল মিডিয়া পোস্ট কার্ড জেনারেটর।">
+  <meta property="og:title" content="Royal Today — আজকের দিন, আজকের তথ্য">
+  <meta property="og:description" content="বাংলা, ইংরেজি, আরবি তারিখ এবং সূর্যোদয়-সূর্যাস্তের নির্ভুল সময়সূচি।">
+  <meta property="og:image" content="cards/today.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌅</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ── Top Navbar ── -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">🌅</div>
+        <div>
+          <div class="brand-title">Royal Today</div>
+          <div class="brand-sub">আজকের দিন, আজকের তথ্য</div>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <div class="btn-ghost" id="liveClock" title="বাংলাদেশ স্থানীয় সময়">
+          --:--:--
+        </div>
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle Dark/Light Mode">
+          ☀️ লাইট মোড
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main Container ── -->
+  <main class="container">
+    
+    <!-- Hero Greetings Banner -->
+    <section class="hero-greeting">
+      <div class="greeting-salam" id="heroSalam">আসসালামুআলাইকুম</div>
+      <div class="greeting-badge">শুভ সকাল</div>
+      <h1 class="greeting-day" id="heroDay">আজ বৃহস্পতিবার</h1>
+    </section>
+
+    <!-- Main 2-Column Grid -->
+    <div class="main-grid">
+
+      <!-- ── Left Column: Live Details & Controls ── -->
+      <section class="info-section">
+
+        <!-- Tri-Calendar Card -->
+        <div class="glass-card">
+          <div class="card-header-title">
+            <h3>📅 ত্রয়ী ক্যালেন্ডার সমন্বয়</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">আজকের তারিখ</span>
+          </div>
+
+          <div class="tri-calendar-grid">
+            <!-- Hijri -->
+            <div class="calendar-pill">
+              <div class="pill-icon">🌙</div>
+              <div class="pill-content">
+                <div class="pill-label">হিজরী সন</div>
+                <div class="pill-value" id="hijriVal">২৪ জমাদিউল আউয়াল ১৪৪৮ হিজরী</div>
+              </div>
+            </div>
+
+            <!-- Bangla -->
+            <div class="calendar-pill">
+              <div class="pill-icon">🌾</div>
+              <div class="pill-content">
+                <div class="pill-label">বঙ্গাব্দ সন</div>
+                <div class="pill-value" id="banglaVal">২০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ</div>
+              </div>
+            </div>
+
+            <!-- Gregorian -->
+            <div class="calendar-pill">
+              <div class="pill-icon">☀️</div>
+              <div class="pill-content">
+                <div class="pill-label">খ্রীষ্টাব্দ সন</div>
+                <div class="pill-value" id="gregorianVal">০৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sun & Season Box -->
+        <div class="glass-card">
+          <div class="card-header-title">
+            <h3>☀️ সূর্য ও জ্যোতির্বিজ্ঞান <span id="sunDistrictLabel" style="color: var(--gold); font-size: 0.95rem;">(ঢাকা)</span></h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">বাংলাদেশ সময়</span>
+          </div>
+
+          <div class="sun-season-box">
+            <!-- Sunrise -->
+            <div class="sun-stat-card">
+              <div class="sun-stat-icon">🌅</div>
+              <div class="sun-stat-label">সূর্যোদয় (ভোর)</div>
+              <div class="sun-stat-time" id="sunriseTime">৬:০৬</div>
+            </div>
+
+            <!-- Sunset -->
+            <div class="sun-stat-card">
+              <div class="sun-stat-icon">🌇</div>
+              <div class="sun-stat-label">সূর্যাস্ত (সন্ধ্যা)</div>
+              <div class="sun-stat-time" id="sunsetTime">৫:১৮</div>
+            </div>
+
+            <!-- Season Banner -->
+            <div class="season-banner" id="seasonVal">
+              🍂 এখন হেমন্তকাল
+            </div>
+          </div>
+        </div>
+
+        <!-- Blessings Box -->
+        <div class="glass-card blessings-card">
+          <p>সময়মত নামাজ পড়ুন</p>
+          <p>সর্বদা আল্লাহকে স্মরণ করুন</p>
+          <p class="highlight">আনন্দময় কাটুক আপনার সারাদিন।</p>
+        </div>
+
+        <!-- Interactive Settings & Date Selection -->
+        <div class="glass-card">
+          <div class="card-header-title">
+            <h3>⚙️ ফিল্টার ও সমন্বয়</h3>
+          </div>
+
+          <div class="controls-grid">
+            <div class="control-group">
+              <label for="dateInput">তারিখ পরিবর্তন (যেকোনো দিন)</label>
+              <input type="date" id="dateInput" class="form-input">
+            </div>
+
+            <div class="control-group">
+              <label for="districtSelect">জেলা ভিত্তিক সময়সূচি</label>
+              <select id="districtSelect" class="form-select">
+                <option value="dhaka">ঢাকা</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="themeSelect">কার্ডের ভিজ্যুয়াল থিম</label>
+              <select id="themeSelect" class="form-select">
+                <option value="sunrise-gold">প্রভাতী কাঞ্চন (Sunrise Gold)</option>
+                <option value="royal-emerald">পান্না সবুজ (Royal Emerald)</option>
+                <option value="midnight-navy">গভীর নীলকান্ত (Midnight Navy)</option>
+                <option value="crimson-dusk">গোধূলি আভা (Crimson Dusk)</option>
+                <option value="warm-parchment">শুভ্র পাণ্ডুলিপি (Warm Parchment)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="hijriOffsetSelect">চাঁদ দেখা সমন্বয় (হিজরি)</label>
+              <select id="hijriOffsetSelect" class="form-select">
+                <option value="0">স্বাভাবিক (০ দিন)</option>
+                <option value="1">+১ দিন (পরের দিন চাঁদ)</option>
+                <option value="-1">-১ দিন (আগের দিন চাঁদ)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ── Right Column: 1080x1080 Card Preview & Actions ── -->
+      <section class="preview-section">
+        <div class="canvas-preview-wrapper">
+          <div class="canvas-container">
+            <canvas id="cardCanvas"></canvas>
+          </div>
+
+          <div class="actions-grid">
+            <button type="button" class="btn btn-primary" id="btnDownload">
+              📥 কার্ড ডাউনলোড
+            </button>
+            <button type="button" class="btn btn-secondary" id="btnCopyCaption">
+              📋 ক্যাপশন কপি
+            </button>
+            <button type="button" class="btn btn-secondary" id="btnCopyImage">
+              🖼️ ইমেজ কপি (Ctrl+V)
+            </button>
+            <button type="button" class="btn btn-secondary" id="btnShare">
+              📱 শেয়ার করুন
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ── Footer: Royal Today Branding at the Bottom ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Royal Today</div>
+      <div class="footer-tagline">আজকের দিন, আজকের তথ্য — এক নজরে প্রতিদিন</div>
+      <div class="footer-credits">
+        কারিগরি সহায়তায়: <a href="https://www.royaltechbd.com/" target="_blank" rel="noopener noreferrer">Royal Technologies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span>✨</span>
+    <span class="toast-msg">কপিকৃত হয়েছে!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/calendar-calc.js"></script>
+  <script src="templates/royal-today-card.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
