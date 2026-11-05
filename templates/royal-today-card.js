@@ -1134,7 +1134,7 @@
     ctx.fillText(seasonLine, W / 2, sunBoxY + 80);
 
     // ── F. Blessings & Reminders ──
-    const blessStartY = 650;
+    const blessStartY = 675;
     const blessings = data.blessings || [
       'সময়মত নামাজ পড়ুন',
       'সর্বদা আল্লাহকে স্মরণ করুন',
@@ -1142,42 +1142,52 @@
     ];
 
     ctx.textAlign = 'center';
-    ctx.font = '500 26px "Hind Siliguri", sans-serif';
+    ctx.textBaseline = 'middle';
+    ctx.font = '500 27px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
     ctx.fillText(blessings[0], W / 2, blessStartY);
-    ctx.fillText(blessings[1], W / 2, blessStartY + 38);
+    ctx.fillText(blessings[1], W / 2, blessStartY + 44);
 
-    ctx.font = '600 28px "Hind Siliguri", sans-serif';
+    ctx.font = '600 30px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.accentGold;
-    ctx.fillText(blessings[2], W / 2, blessStartY + 80);
+    ctx.fillText(blessings[2], W / 2, blessStartY + 92);
 
-    // ── G. Footer: ROYAL TECHNOLOGIES BRANDING AT THE BOTTOM ──
-    const footerY = 800;
+    // ── G. Footer: Left (Company), Center (Tagline), Right (Website URL) ──
+    const footerY = cardY + cardH - 50; // = 990
+    const dividerY = footerY - 24;      // = 966
+
+    ctx.save();
     ctx.strokeStyle = T.borderColor;
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(calBoxX + 60, footerY);
-    ctx.lineTo(W / 2 - 30, footerY);
-    ctx.moveTo(W / 2 + 30, footerY);
-    ctx.lineTo(calBoxX + calBoxW - 60, footerY);
+    ctx.moveTo(cardX + 70, dividerY);
+    ctx.lineTo(W / 2 - 25, dividerY);
+    ctx.moveTo(W / 2 + 25, dividerY);
+    ctx.lineTo(cardX + cardW - 70, dividerY);
     ctx.stroke();
-    drawIslamicStar(ctx, W / 2, footerY, 7.5, 3.5, T.primaryGold);
+    drawIslamicStar(ctx, W / 2, dividerY, 6, 2.8, T.secondaryGold);
 
-    // Primary Branding: Royal Technologies
-    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    // ১. বামে: কোম্পানীর নাম (Royal Technologies)
+    ctx.textAlign = 'left';
+    ctx.font = 'bold 20px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.primaryGold;
-    ctx.font = 'bold 32px "Hind Siliguri", sans-serif';
-    ctx.fillText('Royal Technologies', W / 2, footerY + 48);
+    ctx.fillText('Royal Technologies', cardX + 75, footerY);
 
-    // Website: https://www.royaltechbd.com/
-    ctx.fillStyle = T.accentGold;
-    ctx.font = '600 21px "Hind Siliguri", sans-serif';
-    ctx.fillText('https://www.royaltechbd.com/', W / 2, footerY + 86);
-
-    // Tagline: Royal Today • আজকের দিন, আজকের তথ্য
+    // ২. মাঝে: Royal Today • আজকের দিন, আজকের তথ্য
+    ctx.textAlign = 'center';
     ctx.font = '500 17px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
-    ctx.fillText('Royal Today • আজকের দিন, আজকের তথ্য', W / 2, footerY + 118);
+    ctx.fillText('Royal Today • আজকের দিন, আজকের তথ্য', W / 2, footerY);
+
+    // ৩. ডানে: ওয়েবসাইটের URL (https://www.royaltechbd.com/)
+    ctx.textAlign = 'right';
+    ctx.font = 'bold 19px "Hind Siliguri", sans-serif';
+    ctx.fillStyle = T.secondaryGold || T.primaryGold;
+    ctx.fillText('https://www.royaltechbd.com/', cardX + cardW - 75, footerY);
+
+    ctx.restore();
 
     return ctx;
   }
