@@ -175,7 +175,5 @@ http://localhost/Github/Royal%20Today/
 সর্বদা আল্লাহকে স্মরণ করুন
 আনন্দময় কাটুক আপনার সারাদিন।
 
-🌐 https://www.royaltechbd.com/
-✨ Royal Technologies | Royal Today — আজকের দিন, আজকের তথ্য
-#RoyalTechnologies #RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh
+#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies
 ```

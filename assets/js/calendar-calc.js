@@ -372,9 +372,7 @@ ${blessings[0]}
 ${blessings[1]}
 ${blessings[2]}
 
-🌐 https://www.royaltechbd.com/
-✨ Royal Technologies | Royal Today — আজকের দিন, আজকের তথ্য
-#RoyalTechnologies #RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh`;
+#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies`;
 
     return {
       date: date,
