@@ -1141,17 +1141,17 @@
 
     ctx.textBaseline = 'middle';
 
-    // ১. বামে: কোম্পানীর নাম (Royal Technologies)
+    // ১. বামে: Royal Today
     ctx.textAlign = 'left';
-    ctx.font = 'bold 20px "Hind Siliguri", sans-serif';
+    ctx.font = 'bold 21px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.primaryGold;
-    ctx.fillText('Royal Technologies', cardX + 75, footerY);
+    ctx.fillText('Royal Today', cardX + 75, footerY);
 
-    // ২. মাঝে: Royal Today • আজকের দিন, আজকের তথ্য
+    // ২. মাঝে: আজকের দিন, আজকের তথ্য
     ctx.textAlign = 'center';
-    ctx.font = '500 17px "Hind Siliguri", sans-serif';
+    ctx.font = '500 18px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
-    ctx.fillText('Royal Today • আজকের দিন, আজকের তথ্য', W / 2, footerY);
+    ctx.fillText('আজকের দিন, আজকের তথ্য', W / 2, footerY);
 
     // ৩. ডানে: ওয়েবসাইটের URL (https://www.royaltechbd.com/)
     ctx.textAlign = 'right';
