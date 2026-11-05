@@ -2,8 +2,8 @@ name: Royal Today - Daily Card Generator
 
 on:
   schedule:
-    # Runs at 18:00 UTC daily = 00:00 BST (Bangladesh Standard Time Midnight)
-    - cron: '0 18 * * *'
+    # Runs at 21:00 UTC daily = 03:00 AM BST (Bangladesh Standard Time - রাত ৩:০০ টা)
+    - cron: '0 21 * * *'
   workflow_dispatch:
 
 permissions:
