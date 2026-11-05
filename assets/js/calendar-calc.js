@@ -372,7 +372,9 @@ ${blessings[0]}
 ${blessings[1]}
 ${blessings[2]}
 
-#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies`;
+🌐 https://www.royaltechbd.com/
+✨ Royal Technologies | Royal Today — আজকের দিন, আজকের তথ্য
+#RoyalTechnologies #RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh`;
 
     return {
       date: date,
@@ -386,10 +388,10 @@ ${blessings[2]}
       blessings: blessings,
       caption: caption,
       branding: {
-        name: 'Royal Today',
-        tagline: 'আজকের দিন, আজকের তথ্য',
-        website: 'www.royaltechbd.com',
-        company: 'Royal Technologies'
+        company: 'Royal Technologies',
+        website: 'https://www.royaltechbd.com/',
+        product: 'Royal Today',
+        tagline: 'আজকের দিন, আজকের তথ্য'
       }
     };
   }

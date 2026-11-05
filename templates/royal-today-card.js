@@ -467,9 +467,9 @@
     ctx.fillStyle = T.accentGold;
     ctx.fillText(blessings[2], W / 2, blessStartY + 88);
 
-    // ── H. Footer: ROYAL TODAY BRANDING AT THE BOTTOM ──
+    // ── H. Footer: ROYAL TECHNOLOGIES BRANDING AT THE BOTTOM ──
     // Bottom separator with Islamic Star
-    const footerY = 930;
+    const footerY = 932;
     ctx.strokeStyle = T.borderColor;
     ctx.lineWidth = 1;
     ctx.beginPath();
@@ -480,20 +480,21 @@
     ctx.stroke();
     drawIslamicStar(ctx, W / 2, footerY, 8, 4, T.primaryGold);
 
-    // Royal Today Brand Name (Footer)
+    // Primary Branding: Royal Technologies
     ctx.textAlign = 'center';
     ctx.fillStyle = T.primaryGold;
-    ctx.font = 'bold 34px "Hind Siliguri", sans-serif';
-    ctx.fillText('Royal Today', W / 2, footerY + 44);
+    ctx.font = 'bold 32px "Hind Siliguri", sans-serif';
+    ctx.fillText('Royal Technologies', W / 2, footerY + 44);
 
-    // Tagline & Company URL
+    // Website: https://www.royaltechbd.com/
+    ctx.fillStyle = T.accentGold;
+    ctx.font = '600 21px "Hind Siliguri", sans-serif';
+    ctx.fillText('https://www.royaltechbd.com/', W / 2, footerY + 76);
+
+    // Tagline: Royal Today • আজকের দিন, আজকের তথ্য
+    ctx.font = '500 17px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
-    ctx.font = '500 20px "Hind Siliguri", sans-serif';
-    ctx.fillText('আজকের দিন, আজকের তথ্য • www.royaltechbd.com', W / 2, footerY + 76);
-
-    ctx.font = '400 16px "Hind Siliguri", sans-serif';
-    ctx.fillStyle = T.innerBorderColor;
-    ctx.fillText('কারিগরি সহায়তায়: Royal Technologies', W / 2, footerY + 100);
+    ctx.fillText('Royal Today • আজকের দিন, আজকের তথ্য', W / 2, footerY + 102);
 
     return ctx;
   }
