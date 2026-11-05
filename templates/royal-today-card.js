@@ -321,51 +321,51 @@
     ctx.textBaseline = 'middle';
 
     ctx.fillStyle = T.primaryGold;
-    ctx.font = 'bold 36px "Hind Siliguri", "Amiri", sans-serif';
-    ctx.fillText(data.greetingHeader || 'আসসালামুআলাইকুম', W / 2, 118);
+    ctx.font = 'bold 34px "Hind Siliguri", "Amiri", sans-serif';
+    ctx.fillText(data.greetingHeader || 'আসসালামুআলাইকুম', W / 2, 104);
 
     // Small decorative ornament under Salam
-    drawIslamicStar(ctx, W / 2, 150, 7, 3.5, T.secondaryGold);
+    drawIslamicStar(ctx, W / 2, 132, 6.5, 3, T.secondaryGold);
     ctx.strokeStyle = T.innerBorderColor;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
-    ctx.moveTo(W / 2 - 110, 150);
-    ctx.lineTo(W / 2 - 20, 150);
-    ctx.moveTo(W / 2 + 20, 150);
-    ctx.lineTo(W / 2 + 110, 150);
+    ctx.moveTo(W / 2 - 110, 132);
+    ctx.lineTo(W / 2 - 20, 132);
+    ctx.moveTo(W / 2 + 20, 132);
+    ctx.lineTo(W / 2 + 110, 132);
     ctx.stroke();
 
     // 2. "শুভ সকাল" (Badge Style)
-    const badgeW = 200;
-    const badgeH = 46;
+    const badgeW = 190;
+    const badgeH = 40;
     const badgeX = (W - badgeW) / 2;
-    const badgeY = 175;
+    const badgeY = 152;
 
     ctx.fillStyle = T.badgeBg;
     ctx.strokeStyle = T.badgeBorder;
     ctx.lineWidth = 1.5;
-    drawRoundRect(ctx, badgeX, badgeY, badgeW, badgeH, 23, true, true);
+    drawRoundRect(ctx, badgeX, badgeY, badgeW, badgeH, 20, true, true);
 
     ctx.fillStyle = T.accentGold;
-    ctx.font = '600 24px "Hind Siliguri", sans-serif';
+    ctx.font = '600 22px "Hind Siliguri", sans-serif';
     ctx.fillText(data.greetingSub || 'শুভ সকাল', W / 2, badgeY + badgeH / 2 + 2);
 
     // ── D. Hero Section: আজ [বারের নাম] ──
     // e.g. "আজ বৃহস্পতিবার"
     const todayLine = data.gregorian ? data.gregorian.todayLine : 'আজ বৃহস্পতিবার';
     ctx.fillStyle = T.accentGold;
-    ctx.font = 'bold 54px "Hind Siliguri", sans-serif';
-    ctx.fillText(todayLine, W / 2, 275);
+    ctx.font = 'bold 48px "Hind Siliguri", sans-serif';
+    ctx.fillText(todayLine, W / 2, 236);
 
     // ── E. Three Calendar Boxes (ত্রয়ী ক্যালেন্ডার) ──
     // 1. হিজরী
     // 2. বঙ্গাব্দ
     // 3. খ্রীষ্টাব্দ
     const calBoxW = 900;
-    const calBoxH = 68;
+    const calBoxH = 62;
     const calBoxX = (W - calBoxW) / 2;
-    const calStartY = 330;
-    const calGap = 16;
+    const calStartY = 282;
+    const calGap = 12;
 
     const calendars = [
       {
@@ -398,12 +398,12 @@
       const iconCenterX = calBoxX + 44;
       const iconCenterY = curY + calBoxH / 2;
       if (cal.icon === 'moon') {
-        drawCrescentMoon(ctx, iconCenterX, iconCenterY, 14, T.primaryGold);
+        drawCrescentMoon(ctx, iconCenterX, iconCenterY, 13, T.primaryGold);
       } else if (cal.icon === 'sun') {
-        drawSunIcon(ctx, iconCenterX, iconCenterY + 2, 10, T.sunColor);
+        drawSunIcon(ctx, iconCenterX, iconCenterY + 2, 9, T.sunColor);
       } else {
         // Bengali star
-        drawIslamicStar(ctx, iconCenterX, iconCenterY, 13, 6, T.primaryGold);
+        drawIslamicStar(ctx, iconCenterX, iconCenterY, 12, 5.5, T.primaryGold);
       }
 
       // Divider dot
@@ -414,14 +414,14 @@
 
       // Text
       ctx.textAlign = 'left';
-      ctx.font = '600 30px "Hind Siliguri", sans-serif';
+      ctx.font = '600 28px "Hind Siliguri", sans-serif';
       ctx.fillStyle = T.textColor;
       ctx.fillText(cal.text, calBoxX + 104, iconCenterY + 2);
     });
 
     // ── F. Solar & Season Section ──
-    const sunBoxY = 600;
-    const sunBoxH = 110;
+    const sunBoxY = 518;
+    const sunBoxH = 102;
 
     ctx.fillStyle = T.cardBg;
     ctx.strokeStyle = T.borderColor;
@@ -431,26 +431,26 @@
     // Row 1: সূর্যোদয় ও সূর্যাস্ত
     const sunLine = data.sun ? data.sun.formattedLine : 'সূর্যোদয়-৬:০৬ ও সূর্যাস্ত-৫:১৮(ঢাকা)';
     ctx.textAlign = 'center';
-    ctx.font = 'bold 31px "Hind Siliguri", sans-serif';
+    ctx.font = 'bold 29px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.highlightColor;
-    ctx.fillText(sunLine, W / 2, sunBoxY + 38);
+    ctx.fillText(sunLine, W / 2, sunBoxY + 34);
 
     // Decorative mini-line
     ctx.strokeStyle = T.innerBorderColor;
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(W / 2 - 240, sunBoxY + 62);
-    ctx.lineTo(W / 2 + 240, sunBoxY + 62);
+    ctx.moveTo(W / 2 - 240, sunBoxY + 58);
+    ctx.lineTo(W / 2 + 240, sunBoxY + 58);
     ctx.stroke();
 
     // Row 2: ঋতু (এখন হেমন্তকাল)
     const seasonLine = data.bangla ? data.bangla.seasonLine : 'এখন হেমন্তকাল';
-    ctx.font = '600 26px "Hind Siliguri", sans-serif';
+    ctx.font = '600 24px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
-    ctx.fillText(seasonLine, W / 2, sunBoxY + 86);
+    ctx.fillText(seasonLine, W / 2, sunBoxY + 80);
 
     // ── G. Blessings & Reminders ──
-    const blessStartY = 745;
+    const blessStartY = 650;
     const blessings = data.blessings || [
       'সময়মত নামাজ পড়ুন',
       'সর্বদা আল্লাহকে স্মরণ করুন',
@@ -458,18 +458,18 @@
     ];
 
     ctx.textAlign = 'center';
-    ctx.font = '500 28px "Hind Siliguri", sans-serif';
+    ctx.font = '500 26px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
     ctx.fillText(blessings[0], W / 2, blessStartY);
-    ctx.fillText(blessings[1], W / 2, blessStartY + 42);
+    ctx.fillText(blessings[1], W / 2, blessStartY + 38);
 
-    ctx.font = '600 30px "Hind Siliguri", sans-serif';
+    ctx.font = '600 28px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.accentGold;
-    ctx.fillText(blessings[2], W / 2, blessStartY + 88);
+    ctx.fillText(blessings[2], W / 2, blessStartY + 80);
 
     // ── H. Footer: ROYAL TECHNOLOGIES BRANDING AT THE BOTTOM ──
     // Bottom separator with Islamic Star
-    const footerY = 932;
+    const footerY = 800;
     ctx.strokeStyle = T.borderColor;
     ctx.lineWidth = 1;
     ctx.beginPath();
@@ -478,23 +478,23 @@
     ctx.moveTo(W / 2 + 30, footerY);
     ctx.lineTo(calBoxX + calBoxW - 60, footerY);
     ctx.stroke();
-    drawIslamicStar(ctx, W / 2, footerY, 8, 4, T.primaryGold);
+    drawIslamicStar(ctx, W / 2, footerY, 7.5, 3.5, T.primaryGold);
 
     // Primary Branding: Royal Technologies
     ctx.textAlign = 'center';
     ctx.fillStyle = T.primaryGold;
     ctx.font = 'bold 32px "Hind Siliguri", sans-serif';
-    ctx.fillText('Royal Technologies', W / 2, footerY + 44);
+    ctx.fillText('Royal Technologies', W / 2, footerY + 48);
 
     // Website: https://www.royaltechbd.com/
     ctx.fillStyle = T.accentGold;
     ctx.font = '600 21px "Hind Siliguri", sans-serif';
-    ctx.fillText('https://www.royaltechbd.com/', W / 2, footerY + 76);
+    ctx.fillText('https://www.royaltechbd.com/', W / 2, footerY + 86);
 
     // Tagline: Royal Today • আজকের দিন, আজকের তথ্য
     ctx.font = '500 17px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.subTextColor;
-    ctx.fillText('Royal Today • আজকের দিন, আজকের তথ্য', W / 2, footerY + 102);
+    ctx.fillText('Royal Today • আজকের দিন, আজকের তথ্য', W / 2, footerY + 118);
 
     return ctx;
   }
