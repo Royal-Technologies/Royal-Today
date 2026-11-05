@@ -552,6 +552,7 @@ body.light .navbar {
   border: none;
   transition: var(--transition);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .btn-primary {

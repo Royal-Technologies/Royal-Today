@@ -703,7 +703,6 @@
         ctx.lineTo(archR, archBase);
         ctx.stroke();
 
-        drawIslamicStar(ctx, W / 2, archApex - 12, 7, 3.5, theme.primaryGold);
         drawCornerBrackets(ctx, cardX + 30, cardY + 30, cardW - 60, cardH - 60, 36, theme.primaryGold);
         break;
       }
@@ -738,18 +737,6 @@
         drawRoundRect(ctx, cardX + 16, cardY + 16, cardW - 32, cardH - 32, 16);
         ctx.stroke();
 
-        ctx.save();
-        ctx.strokeStyle = theme.subtleLine;
-        ctx.lineWidth = 1.2;
-        for (let angle = 0; angle < Math.PI; angle += Math.PI / 8) {
-          ctx.beginPath();
-          const r = 52;
-          ctx.ellipse(W / 2, cardY + 55, r, r / 3, angle, 0, Math.PI * 2);
-          ctx.stroke();
-        }
-        ctx.restore();
-
-        drawIslamicStar(ctx, W / 2, cardY + 55, 9, 4.5, theme.primaryGold);
         drawCornerBrackets(ctx, cardX + 30, cardY + 30, cardW - 60, cardH - 60, 38, theme.primaryGold);
         break;
       }
@@ -806,8 +793,6 @@
         ctx.moveTo(pLeft + 8, pTop);
         ctx.bezierCurveTo(pLeft + 80, pTop - 20, pRight - 80, pTop - 20, pRight - 8, pTop);
         ctx.stroke();
-
-        drawIslamicStar(ctx, W / 2, pTop - 15, 7, 3.5, theme.primaryGold);
         break;
       }
 
@@ -818,8 +803,6 @@
         drawRoundRect(ctx, cardX + 16, cardY + 16, cardW - 32, cardH - 32, 16);
         ctx.stroke();
 
-        drawCrescentMoon(ctx, W / 2 - 120, cardY + 55, 12, theme.primaryGold);
-        drawIslamicStar(ctx, W / 2 - 108, cardY + 55, 5, 2.5, theme.accentGold);
         drawCornerBrackets(ctx, cardX + 30, cardY + 30, cardW - 60, cardH - 60, 34, theme.primaryGold);
         break;
       }
@@ -831,15 +814,6 @@
         drawRoundRect(ctx, cardX + 16, cardY + 16, cardW - 32, cardH - 32, 16);
         ctx.stroke();
 
-        const lobeY = cardY + 95;
-        ctx.beginPath();
-        ctx.moveTo(cardX + 70, lobeY);
-        const lobeStep = (cardW - 140) / 5;
-        for (let i = 0; i < 5; i++) {
-          const lx = cardX + 70 + i * lobeStep;
-          ctx.bezierCurveTo(lx + lobeStep * 0.2, lobeY - 30, lx + lobeStep * 0.8, lobeY - 30, lx + lobeStep, lobeY);
-        }
-        ctx.stroke();
         drawCornerBrackets(ctx, cardX + 30, cardY + 30, cardW - 60, cardH - 60, 40, theme.primaryGold);
         break;
       }
@@ -860,8 +834,6 @@
         ctx.lineTo(cardX, cardY + ch);
         ctx.closePath();
         ctx.stroke();
-
-        drawIslamicStar(ctx, W / 2, cardY + 48, 11, 5.5, theme.primaryGold);
         break;
       }
 
