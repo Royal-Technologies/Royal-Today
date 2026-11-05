@@ -891,8 +891,82 @@
     const themeKey = options.theme || 'royal-emerald';
     const layoutKey = options.layout || 'mihrab-arch';
 
-    const T = THEMES[themeKey] || THEMES['royal-emerald'];
+    let T = Object.assign({}, THEMES[themeKey] || THEMES['royal-emerald']);
     const L = LAYOUTS[layoutKey] || LAYOUTS['mihrab-arch'];
+
+    // ── DYNAMIC CONTRAST ENGINE ──
+    // Ensures text is ALWAYS 100% crisp, legible, and high-contrast
+    if (layoutKey === 'scenic-alabaster-gold') {
+      // Pure White / Alabaster Gold scenic canvas -> High-contrast dark typography
+      T = Object.assign({}, T, {
+        cardBg: 'rgba(255, 255, 255, 0.95)',
+        borderColor: 'rgba(15, 23, 42, 0.22)',
+        subtleLine: 'rgba(15, 23, 42, 0.12)',
+        badgeBg: 'rgba(217, 119, 6, 0.12)',
+        badgeBorder: 'rgba(217, 119, 6, 0.35)',
+        badgeText: '#92400E',
+        primaryGold: '#064E3B',    // Deep majestic emerald
+        secondaryGold: '#B45309',  // Deep warm amber
+        accentGold: '#0F172A',     // Crisp dark slate for main headings
+        textColor: '#0F172A',      // High contrast dark text for calendar boxes
+        subTextColor: '#334155',   // Deep slate for sub-text
+        highlightColor: '#064E3B', // Rich emerald
+        sunColor: '#D97706',
+        isDark: false
+      });
+    } else if (layoutKey === 'scenic-kaaba-parchment') {
+      // Vintage Parchment Sketch canvas -> High-contrast warm charcoal / deep brown typography
+      T = Object.assign({}, T, {
+        cardBg: 'rgba(255, 253, 247, 0.88)',
+        borderColor: 'rgba(109, 76, 39, 0.38)',
+        subtleLine: 'rgba(109, 76, 39, 0.18)',
+        badgeBg: 'rgba(109, 76, 39, 0.12)',
+        badgeBorder: 'rgba(109, 76, 39, 0.35)',
+        badgeText: '#4A3219',
+        primaryGold: '#6D4C27',
+        secondaryGold: '#8B6538',
+        accentGold: '#2B1A0E',     // Deep antique brown
+        textColor: '#1A120B',      // Deep charcoal
+        subTextColor: '#422814',   // Rich brown
+        highlightColor: '#2B1A0E',
+        sunColor: '#B45309',
+        isDark: false
+      });
+    } else if (!T.isDark) {
+      // Light themes (warm-parchment, classic-ivory)
+      T = Object.assign({}, T, {
+        cardBg: 'rgba(255, 255, 255, 0.9)',
+        borderColor: 'rgba(148, 110, 38, 0.38)',
+        subtleLine: 'rgba(148, 110, 38, 0.18)',
+        badgeBg: 'rgba(148, 110, 38, 0.1)',
+        badgeBorder: 'rgba(148, 110, 38, 0.32)',
+        badgeText: '#705315',
+        textColor: '#1A120B',
+        subTextColor: '#3F2D1D',
+        highlightColor: '#1A120B',
+        accentGold: '#2B1E14',
+        primaryGold: '#8C6721',
+        secondaryGold: '#6A4A0E'
+      });
+    } else if (layoutKey.startsWith('scenic-')) {
+      // All other photo-scenic backgrounds (mountains, stars, dusk, clouds, etc.)
+      T = Object.assign({}, T, {
+        cardBg: 'rgba(15, 23, 42, 0.72)',
+        borderColor: 'rgba(255, 255, 255, 0.32)',
+        subtleLine: 'rgba(255, 255, 255, 0.18)',
+        badgeBg: 'rgba(255, 255, 255, 0.16)',
+        badgeBorder: 'rgba(255, 255, 255, 0.35)',
+        badgeText: '#FFFBEB',
+        primaryGold: '#FDE68A',
+        secondaryGold: '#F59E0B',
+        accentGold: '#FFFFFF',
+        textColor: '#FFFFFF',
+        subTextColor: '#E2E8F0',
+        highlightColor: '#FDE68A',
+        sunColor: '#F59E0B',
+        isDark: true
+      });
+    }
 
     const cardMargin = 40;
     const cardX = cardMargin;
@@ -904,6 +978,19 @@
     if (layoutKey.startsWith('scenic-')) {
       // 10 Scenic & Image Backgrounds
       renderScenicBackground(ctx, layoutKey, cardX, cardY, cardW, cardH);
+
+      // Add double border for alabaster & parchment scenic frames
+      if (layoutKey === 'scenic-alabaster-gold' || layoutKey === 'scenic-kaaba-parchment') {
+        ctx.save();
+        ctx.strokeStyle = layoutKey === 'scenic-alabaster-gold' ? 'rgba(212, 175, 55, 0.65)' : 'rgba(109, 76, 39, 0.45)';
+        ctx.lineWidth = 1.6;
+        drawRoundRect(ctx, cardX + 16, cardY + 16, cardW - 32, cardH - 32, 16);
+        ctx.stroke();
+        drawRoundRect(ctx, cardX + 22, cardY + 22, cardW - 44, cardH - 44, 12);
+        ctx.stroke();
+        drawCornerBrackets(ctx, cardX + 28, cardY + 28, cardW - 56, cardH - 56, 26, '#D4AF37');
+        ctx.restore();
+      }
     } else {
       // 10 Architectural Theme Gradient Backgrounds
       const grad = ctx.createLinearGradient(0, 0, 0, H);
@@ -955,7 +1042,7 @@
     ctx.lineWidth = 1.5;
     drawRoundRect(ctx, badgeX, badgeY, badgeW, badgeH, 20, true, true);
 
-    ctx.fillStyle = T.accentGold;
+    ctx.fillStyle = T.badgeText || (T.isDark ? T.accentGold : T.primaryGold);
     ctx.font = '600 22px "Hind Siliguri", sans-serif';
     ctx.fillText(data.greetingSub || 'শুভ সকাল', W / 2, badgeY + badgeH / 2 + 2);
 
