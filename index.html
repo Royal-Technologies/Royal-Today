@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌅</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -23,7 +23,9 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#" class="brand-logo">
-        <div class="brand-icon">🌅</div>
+        <div class="brand-icon">
+          <img src="assets/favicon.svg" alt="Royal Today" width="30" height="30">
+        </div>
         <div>
           <div class="brand-title">Royal Today</div>
           <div class="brand-sub">আজকের দিন, আজকের তথ্য</div>
@@ -49,96 +51,106 @@
       <div class="greeting-salam" id="heroSalam">আসসালামুআলাইকুম</div>
       <div class="greeting-badge">শুভ সকাল</div>
       <h1 class="greeting-day" id="heroDay">আজ বৃহস্পতিবার</h1>
+      <p style="color: var(--text-muted); margin-top: 6px; font-size: 1.05rem;">
+        আজকের হিজরি, বাংলা ও ইংরেজি তারিখ এবং সূর্যোদয়-সূর্যাস্তের সময়সূচি
+      </p>
     </section>
 
-    <!-- Main 2-Column Grid -->
+    <!-- ── FEATURED TODAY CARD SHOWCASE (কার্ড ডিসপ্লে) ── -->
+    <section class="today-showcase">
+      <div class="today-img-wrap">
+        <img id="todayCardImg" src="cards/today.png" alt="Royal Today কার্ড" onerror="this.src='cards/today.png'">
+        <div class="card-tag-badge">১০৮০×১০৮০ পোস্ট রেডি</div>
+      </div>
+
+      <div class="today-info-wrap">
+        <div class="card-header-title" style="margin-bottom: 12px; border: none; padding: 0;">
+          <h2 style="font-size: 1.6rem; color: var(--text-accent);">আজকের পোস্ট কার্ড</h2>
+          <span class="greeting-badge" style="margin: 0;">প্রতিদিন স্বয়ংক্রিয় আপডেট</span>
+        </div>
+
+        <!-- Tri-Calendar Pills -->
+        <div class="tri-calendar-grid" style="margin-bottom: 18px;">
+          <div class="calendar-pill">
+            <div class="pill-icon">🌙</div>
+            <div class="pill-content">
+              <div class="pill-label">হিজরী সন</div>
+              <div class="pill-value" id="showcaseHijri">২৪ জমাদিউল আউয়াল ১৪৪৮ হিজরী</div>
+            </div>
+          </div>
+
+          <div class="calendar-pill">
+            <div class="pill-icon">🌾</div>
+            <div class="pill-content">
+              <div class="pill-label">বঙ্গাব্দ সন</div>
+              <div class="pill-value" id="showcaseBangla">২০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ</div>
+            </div>
+          </div>
+
+          <div class="calendar-pill">
+            <div class="pill-icon">☀️</div>
+            <div class="pill-content">
+              <div class="pill-label">খ্রীষ্টাব্দ সন</div>
+              <div class="pill-value" id="showcaseGregorian">০৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sun & Season Row -->
+        <div class="sun-season-box" style="margin-bottom: 20px;">
+          <div class="sun-stat-card">
+            <div class="sun-stat-icon">🌅</div>
+            <div class="sun-stat-label">সূর্যোদয় (ভোর)</div>
+            <div class="sun-stat-time" id="showcaseSunrise">৬:০৬</div>
+          </div>
+          <div class="sun-stat-card">
+            <div class="sun-stat-icon">🌇</div>
+            <div class="sun-stat-label">সূর্যাস্ত (সন্ধ্যা)</div>
+            <div class="sun-stat-time" id="showcaseSunset">৫:১৮</div>
+          </div>
+          <div class="season-banner" id="showcaseSeason">
+            🍂 এখন হেমন্তকাল
+          </div>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="actions-grid">
+          <a href="cards/today.png" download="RoyalToday-Today.png" class="btn btn-primary" id="btnDownloadShowcase">
+            📥 কার্ড ডাউনলোড (PNG)
+          </a>
+          <button type="button" class="btn btn-secondary" id="btnCopyCaptionShowcase">
+            📋 ক্যাপশন কপি
+          </button>
+          <button type="button" class="btn btn-secondary" id="btnCopyImageShowcase">
+            🖼️ ইমেজ কপি (Ctrl+V)
+          </button>
+          <button type="button" class="btn btn-secondary" id="btnShareShowcase">
+            📱 শেয়ার করুন
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INTERACTIVE CUSTOMIZER & LIVE PREVIEW ── -->
+    <div class="section-divider">
+      <span>🎨 লাইভ কাস্টমাইজার ও ক্যালকুলেটর</span>
+    </div>
+
     <div class="main-grid">
 
-      <!-- ── Left Column: Live Details & Controls ── -->
+      <!-- Left: Interactive Controls & Details -->
       <section class="info-section">
-
-        <!-- Tri-Calendar Card -->
+        
+        <!-- Controls -->
         <div class="glass-card">
           <div class="card-header-title">
-            <h3>📅 ত্রয়ী ক্যালেন্ডার সমন্বয়</h3>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">আজকের তারিখ</span>
-          </div>
-
-          <div class="tri-calendar-grid">
-            <!-- Hijri -->
-            <div class="calendar-pill">
-              <div class="pill-icon">🌙</div>
-              <div class="pill-content">
-                <div class="pill-label">হিজরী সন</div>
-                <div class="pill-value" id="hijriVal">২৪ জমাদিউল আউয়াল ১৪৪৮ হিজরী</div>
-              </div>
-            </div>
-
-            <!-- Bangla -->
-            <div class="calendar-pill">
-              <div class="pill-icon">🌾</div>
-              <div class="pill-content">
-                <div class="pill-label">বঙ্গাব্দ সন</div>
-                <div class="pill-value" id="banglaVal">২০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ</div>
-              </div>
-            </div>
-
-            <!-- Gregorian -->
-            <div class="calendar-pill">
-              <div class="pill-icon">☀️</div>
-              <div class="pill-content">
-                <div class="pill-label">খ্রীষ্টাব্দ সন</div>
-                <div class="pill-value" id="gregorianVal">০৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sun & Season Box -->
-        <div class="glass-card">
-          <div class="card-header-title">
-            <h3>☀️ সূর্য ও জ্যোতির্বিজ্ঞান <span id="sunDistrictLabel" style="color: var(--gold); font-size: 0.95rem;">(ঢাকা)</span></h3>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">বাংলাদেশ সময়</span>
-          </div>
-
-          <div class="sun-season-box">
-            <!-- Sunrise -->
-            <div class="sun-stat-card">
-              <div class="sun-stat-icon">🌅</div>
-              <div class="sun-stat-label">সূর্যোদয় (ভোর)</div>
-              <div class="sun-stat-time" id="sunriseTime">৬:০৬</div>
-            </div>
-
-            <!-- Sunset -->
-            <div class="sun-stat-card">
-              <div class="sun-stat-icon">🌇</div>
-              <div class="sun-stat-label">সূর্যাস্ত (সন্ধ্যা)</div>
-              <div class="sun-stat-time" id="sunsetTime">৫:১৮</div>
-            </div>
-
-            <!-- Season Banner -->
-            <div class="season-banner" id="seasonVal">
-              🍂 এখন হেমন্তকাল
-            </div>
-          </div>
-        </div>
-
-        <!-- Blessings Box -->
-        <div class="glass-card blessings-card">
-          <p>সময়মত নামাজ পড়ুন</p>
-          <p>সর্বদা আল্লাহকে স্মরণ করুন</p>
-          <p class="highlight">আনন্দময় কাটুক আপনার সারাদিন।</p>
-        </div>
-
-        <!-- Interactive Settings & Date Selection -->
-        <div class="glass-card">
-          <div class="card-header-title">
-            <h3>⚙️ ফিল্টার ও সমন্বয়</h3>
+            <h3>⚙️ তারিখ ও জেলা ভিত্তিক ক্যালকুলেটর</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">যেকোনো দিন পরিবর্তন করুন</span>
           </div>
 
           <div class="controls-grid">
             <div class="control-group">
-              <label for="dateInput">তারিখ পরিবর্তন (যেকোনো দিন)</label>
+              <label for="dateInput">তারিখ পরিবর্তন (অতীত বা ভবিষ্যৎ)</label>
               <input type="date" id="dateInput" class="form-input">
             </div>
 
@@ -171,27 +183,41 @@
           </div>
         </div>
 
+        <!-- Spiritual Reminders Message -->
+        <div class="glass-card blessings-card">
+          <p>সময়মত নামাজ পড়ুন</p>
+          <p>সর্বদা আল্লাহকে স্মরণ করুন</p>
+          <p class="highlight">আনন্দময় কাটুক আপনার সারাদিন।</p>
+        </div>
+
+        <!-- Formatted Caption Preview -->
+        <div class="glass-card">
+          <div class="card-header-title">
+            <h3>📜 পোস্ট ক্যাপশন প্রিভিউ</h3>
+            <button class="btn-ghost" id="btnCopyCaptionBox" style="font-size: 0.8rem; padding: 4px 10px;">📋 কপি</button>
+          </div>
+          <pre id="captionPreviewText" style="white-space: pre-wrap; font-family: inherit; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); background: var(--soft-bg); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--card-border);"></pre>
+        </div>
+
       </section>
 
-      <!-- ── Right Column: 1080x1080 Card Preview & Actions ── -->
+      <!-- Right: Live Canvas Preview -->
       <section class="preview-section">
         <div class="canvas-preview-wrapper">
+          <div class="card-header-title" style="margin-bottom: 12px; padding-bottom: 6px;">
+            <h3 style="font-size: 1.05rem;">🖼️ লাইভ ক্যানভাস প্রিভিউ</h3>
+            <span style="font-size: 0.8rem; color: var(--gold);" id="previewThemeLabel">Sunrise Gold</span>
+          </div>
           <div class="canvas-container">
             <canvas id="cardCanvas"></canvas>
           </div>
 
           <div class="actions-grid">
             <button type="button" class="btn btn-primary" id="btnDownload">
-              📥 কার্ড ডাউনলোড
-            </button>
-            <button type="button" class="btn btn-secondary" id="btnCopyCaption">
-              📋 ক্যাপশন কপি
+              📥 কাস্টম কার্ড ডাউনলোড
             </button>
             <button type="button" class="btn btn-secondary" id="btnCopyImage">
               🖼️ ইমেজ কপি (Ctrl+V)
-            </button>
-            <button type="button" class="btn btn-secondary" id="btnShare">
-              📱 শেয়ার করুন
             </button>
           </div>
         </div>

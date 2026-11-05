@@ -21,23 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const hijriOffsetSelect = document.getElementById('hijriOffsetSelect');
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const liveClockEl = document.getElementById('liveClock');
+  const previewThemeLabel = document.getElementById('previewThemeLabel');
+  const captionPreviewText = document.getElementById('captionPreviewText');
 
-  // Text Elements
+  // Hero & Showcase Text Elements
   const heroSalamEl = document.getElementById('heroSalam');
   const heroDayEl = document.getElementById('heroDay');
-  const hijriValEl = document.getElementById('hijriVal');
-  const banglaValEl = document.getElementById('banglaVal');
-  const gregorianValEl = document.getElementById('gregorianVal');
-  const sunriseTimeEl = document.getElementById('sunriseTime');
-  const sunsetTimeEl = document.getElementById('sunsetTime');
-  const seasonValEl = document.getElementById('seasonVal');
-  const sunDistrictLabel = document.getElementById('sunDistrictLabel');
+  const showcaseHijri = document.getElementById('showcaseHijri');
+  const showcaseBangla = document.getElementById('showcaseBangla');
+  const showcaseGregorian = document.getElementById('showcaseGregorian');
+  const showcaseSunrise = document.getElementById('showcaseSunrise');
+  const showcaseSunset = document.getElementById('showcaseSunset');
+  const showcaseSeason = document.getElementById('showcaseSeason');
 
   // Buttons
   const btnDownload = document.getElementById('btnDownload');
-  const btnCopyCaption = document.getElementById('btnCopyCaption');
   const btnCopyImage = document.getElementById('btnCopyImage');
-  const btnShare = document.getElementById('btnShare');
+  const btnCopyCaptionShowcase = document.getElementById('btnCopyCaptionShowcase');
+  const btnCopyImageShowcase = document.getElementById('btnCopyImageShowcase');
+  const btnShareShowcase = document.getElementById('btnShareShowcase');
+  const btnCopyCaptionBox = document.getElementById('btnCopyCaptionBox');
   const toastEl = document.getElementById('toast');
 
   // Canvas
@@ -91,16 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
       hijriOffset: state.hijriOffset
     });
 
-    // Update DOM Texts
+    // Update Hero & Showcase Texts
     if (heroSalamEl) heroSalamEl.textContent = data.greetingHeader;
     if (heroDayEl) heroDayEl.textContent = data.gregorian.todayLine;
-    if (hijriValEl) hijriValEl.textContent = data.hijri.formattedText;
-    if (banglaValEl) banglaValEl.textContent = data.bangla.formattedText;
-    if (gregorianValEl) gregorianValEl.textContent = data.gregorian.formattedText;
-    if (sunriseTimeEl) sunriseTimeEl.textContent = data.sun.sunriseBn;
-    if (sunsetTimeEl) sunsetTimeEl.textContent = data.sun.sunsetBn;
-    if (seasonValEl) seasonValEl.textContent = data.bangla.seasonLine;
-    if (sunDistrictLabel) sunDistrictLabel.textContent = `(${data.sun.district})`;
+    if (showcaseHijri) showcaseHijri.textContent = data.hijri.formattedText;
+    if (showcaseBangla) showcaseBangla.textContent = data.bangla.formattedText;
+    if (showcaseGregorian) showcaseGregorian.textContent = data.gregorian.formattedText;
+    if (showcaseSunrise) showcaseSunrise.textContent = data.sun.sunriseBn;
+    if (showcaseSunset) showcaseSunset.textContent = data.sun.sunsetBn;
+    if (showcaseSeason) showcaseSeason.textContent = `🍂 ${data.bangla.seasonLine}`;
+
+    if (previewThemeLabel && window.RoyalTodayCard.THEMES[state.theme]) {
+      previewThemeLabel.textContent = window.RoyalTodayCard.THEMES[state.theme].name;
+    }
+
+    if (captionPreviewText) {
+      captionPreviewText.textContent = data.caption;
+    }
 
     // Render Canvas
     window.RoyalTodayCard.render(ctx, data, { theme: state.theme });
@@ -138,59 +148,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 7. Action Buttons ──
-
-  // Download Card PNG
-  if (btnDownload) {
-    btnDownload.addEventListener('click', () => {
-      const link = document.createElement('a');
-      const dStr = formatDateInput(state.date).replace(/-/g, '');
-      link.download = `Royal-Today-${dStr}.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
-      showToast('কার্ড ডাউনলোড শুরু হয়েছে!');
+  // ── 7. Action Helpers ──
+  async function copyCaptionText() {
+    const data = window.CalendarCalc.getCompleteDailyData(state.date, {
+      district: state.district,
+      hijriOffset: state.hijriOffset
     });
+    try {
+      await navigator.clipboard.writeText(data.caption);
+      showToast('ক্যাপশন সফলভাবে কপি হয়েছে!');
+    } catch (err) {
+      showToast('কপিতে সমস্যা হয়েছে!');
+    }
   }
 
-  // Copy Caption to Clipboard
-  if (btnCopyCaption) {
-    btnCopyCaption.addEventListener('click', async () => {
-      const data = window.CalendarCalc.getCompleteDailyData(state.date, {
-        district: state.district,
-        hijriOffset: state.hijriOffset
+  async function copyCanvasImage() {
+    try {
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          showToast('ইমেজ তৈরি ব্যর্থ হয়েছে!');
+          return;
+        }
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': blob })
+        ]);
+        showToast('ইমেজ ক্লিপবোর্ডে কপি হয়েছে! (ফেসবুকে Ctrl+V চাপুন)');
       });
-      try {
-        await navigator.clipboard.writeText(data.caption);
-        showToast('ক্যাপশন কপি করা হয়েছে!');
-      } catch (err) {
-        showToast('কপি করতে সমস্যা হয়েছে!');
-      }
-    });
+    } catch (err) {
+      showToast('ব্রাউজারে সরাসরি ইমেজ কপি সমর্থিত নয়!');
+    }
   }
 
-  // Copy Image to Clipboard (Ctrl+V Ready)
-  if (btnCopyImage) {
-    btnCopyImage.addEventListener('click', async () => {
-      try {
-        canvas.toBlob(async (blob) => {
-          if (!blob) {
-            showToast('ইমেজ তৈরি ব্যর্থ হয়েছে!');
-            return;
-          }
-          await navigator.clipboard.write([
-            new ClipboardItem({ 'image/png': blob })
-          ]);
-          showToast('ইমেজ ক্লিপবোর্ডে কপি হয়েছে! (ফেসবুকে Ctrl+V চাপুন)');
-        });
-      } catch (err) {
-        showToast('ব্রাউজারে ইমেজ কপি সমর্থিত নয়!');
-      }
-    });
+  function downloadCanvasImage() {
+    const link = document.createElement('a');
+    const dStr = formatDateInput(state.date).replace(/-/g, '');
+    link.download = `Royal-Today-${dStr}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('কার্ড ডাউনলোড শুরু হয়েছে!');
   }
+
+  // Bind Buttons
+  if (btnDownload) btnDownload.addEventListener('click', downloadCanvasImage);
+  if (btnCopyImage) btnCopyImage.addEventListener('click', copyCanvasImage);
+  if (btnCopyImageShowcase) btnCopyImageShowcase.addEventListener('click', copyCanvasImage);
+  if (btnCopyCaptionShowcase) btnCopyCaptionShowcase.addEventListener('click', copyCaptionText);
+  if (btnCopyCaptionBox) btnCopyCaptionBox.addEventListener('click', copyCaptionText);
 
   // Native Web Share
-  if (btnShare) {
-    btnShare.addEventListener('click', async () => {
+  if (btnShareShowcase) {
+    btnShareShowcase.addEventListener('click', async () => {
       const data = window.CalendarCalc.getCompleteDailyData(state.date, {
         district: state.district,
         hijriOffset: state.hijriOffset
@@ -207,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
           });
         } catch (err) {
-          // Fallback share text only
           try {
             await navigator.share({
               title: 'Royal Today — আজকের দিন, আজকের তথ্য',
@@ -216,8 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
           } catch (e) {}
         }
       } else {
-        // Fallback to copy caption
-        btnCopyCaption.click();
+        copyCaptionText();
       }
     });
   }
@@ -256,7 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateClock();
 
   // Initial Render
-  // Wait for fonts to load for pixel perfect canvas
   if (document.fonts) {
     document.fonts.ready.then(() => {
       updateUI();
