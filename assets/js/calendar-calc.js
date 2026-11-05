@@ -387,7 +387,7 @@ ${blessings[2]}
       caption: caption,
       branding: {
         company: 'Royal Technologies',
-        website: 'https://www.royaltechbd.com/',
+        website: 'www.royaltechbd.com',
         product: 'Royal Today',
         tagline: 'আজকের দিন, আজকের তথ্য'
       }

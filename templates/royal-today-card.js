@@ -1153,11 +1153,11 @@
     ctx.fillStyle = T.subTextColor;
     ctx.fillText('আজকের দিন, আজকের তথ্য', W / 2, footerY);
 
-    // ৩. ডানে: ওয়েবসাইটের URL (https://www.royaltechbd.com/)
+    // ৩. ডানে: ওয়েবসাইটের URL (www.royaltechbd.com)
     ctx.textAlign = 'right';
     ctx.font = 'bold 19px "Hind Siliguri", sans-serif';
     ctx.fillStyle = T.secondaryGold || T.primaryGold;
-    ctx.fillText('https://www.royaltechbd.com/', cardX + cardW - 75, footerY);
+    ctx.fillText('www.royaltechbd.com', cardX + cardW - 75, footerY);
 
     ctx.restore();
 
