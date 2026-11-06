@@ -191,18 +191,19 @@
     'classic-ivory': {
       key: 'classic-ivory',
       name: 'শুভ্র মুক্তা আইভরি (Classic Pearl Ivory)',
-      bgGrad: ['#161B22', '#21262D', '#30363D'],
-      cardBg: 'rgba(252, 250, 245, 0.9)',
-      primaryGold: '#967228',
-      secondaryGold: '#705315',
-      accentGold: '#BD9645',
-      textColor: '#172420',
-      subTextColor: '#705315',
-      highlightColor: '#0C1B16',
-      borderColor: 'rgba(150, 114, 40, 0.42)',
-      subtleLine: 'rgba(150, 114, 40, 0.2)',
-      badgeBg: 'rgba(150, 114, 40, 0.1)',
-      badgeBorder: 'rgba(150, 114, 40, 0.32)',
+      bgGrad: ['#FCFAF6', '#F7F3E9', '#EDE5D5'],
+      cardBg: 'rgba(255, 255, 255, 0.95)',
+      primaryGold: '#064E3B',    // Deep majestic emerald
+      secondaryGold: '#92400E',  // Warm amber gold
+      accentGold: '#0F172A',     // Deep slate for hero headings
+      textColor: '#0F172A',      // High contrast dark text
+      subTextColor: '#334155',   // Deep slate
+      highlightColor: '#064E3B', // Rich emerald
+      borderColor: 'rgba(15, 23, 42, 0.22)',
+      subtleLine: 'rgba(15, 23, 42, 0.12)',
+      badgeBg: 'rgba(217, 119, 6, 0.12)',
+      badgeBorder: 'rgba(217, 119, 6, 0.35)',
+      badgeText: '#92400E',
       sunColor: '#D97706',
       isDark: false
     }
@@ -866,62 +867,52 @@
     let T = Object.assign({}, THEMES[themeKey] || THEMES['royal-emerald']);
     const L = LAYOUTS[layoutKey] || LAYOUTS['mihrab-arch'];
 
-    // ── DYNAMIC CONTRAST ENGINE ──
-    // Ensures text is ALWAYS 100% crisp, legible, and high-contrast
-    if (layoutKey === 'scenic-alabaster-gold') {
-      // Pure White / Alabaster Gold scenic canvas -> High-contrast dark typography
-      T = Object.assign({}, T, {
-        cardBg: 'rgba(255, 255, 255, 0.95)',
-        borderColor: 'rgba(15, 23, 42, 0.22)',
-        subtleLine: 'rgba(15, 23, 42, 0.12)',
-        badgeBg: 'rgba(217, 119, 6, 0.12)',
-        badgeBorder: 'rgba(217, 119, 6, 0.35)',
-        badgeText: '#92400E',
-        primaryGold: '#064E3B',    // Deep majestic emerald
-        secondaryGold: '#B45309',  // Deep warm amber
-        accentGold: '#0F172A',     // Crisp dark slate for main headings
-        textColor: '#0F172A',      // High contrast dark text for calendar boxes
-        subTextColor: '#334155',   // Deep slate for sub-text
-        highlightColor: '#064E3B', // Rich emerald
-        sunColor: '#D97706',
-        isDark: false
-      });
-    } else if (layoutKey === 'scenic-kaaba-parchment') {
-      // Vintage Parchment Sketch canvas -> High-contrast warm charcoal / deep brown typography
-      T = Object.assign({}, T, {
-        cardBg: 'rgba(255, 253, 247, 0.88)',
-        borderColor: 'rgba(109, 76, 39, 0.38)',
-        subtleLine: 'rgba(109, 76, 39, 0.18)',
-        badgeBg: 'rgba(109, 76, 39, 0.12)',
-        badgeBorder: 'rgba(109, 76, 39, 0.35)',
-        badgeText: '#4A3219',
-        primaryGold: '#6D4C27',
-        secondaryGold: '#8B6538',
-        accentGold: '#2B1A0E',     // Deep antique brown
-        textColor: '#1A120B',      // Deep charcoal
-        subTextColor: '#422814',   // Rich brown
-        highlightColor: '#2B1A0E',
-        sunColor: '#B45309',
-        isDark: false
-      });
-    } else if (!T.isDark) {
-      // Light themes (warm-parchment, classic-ivory)
-      T = Object.assign({}, T, {
-        cardBg: 'rgba(255, 255, 255, 0.9)',
-        borderColor: 'rgba(148, 110, 38, 0.38)',
-        subtleLine: 'rgba(148, 110, 38, 0.18)',
-        badgeBg: 'rgba(148, 110, 38, 0.1)',
-        badgeBorder: 'rgba(148, 110, 38, 0.32)',
-        badgeText: '#705315',
-        textColor: '#1A120B',
-        subTextColor: '#3F2D1D',
-        highlightColor: '#1A120B',
-        accentGold: '#2B1E14',
-        primaryGold: '#8C6721',
-        secondaryGold: '#6A4A0E'
-      });
-    } else if (layoutKey.startsWith('scenic-')) {
-      // All other photo-scenic backgrounds (mountains, stars, dusk, clouds, etc.)
+    // ── DYNAMIC CONTRAST ENGINE (GUARANTEED 100% LEGIBILITY) ──
+    const isScenic = layoutKey.startsWith('scenic-');
+    const isLightScenic = layoutKey === 'scenic-alabaster-gold' || layoutKey === 'scenic-kaaba-parchment';
+    const isDarkScenic = isScenic && !isLightScenic;
+
+    if (isLightScenic) {
+      // Light scenic canvas (pure white alabaster or vintage parchment)
+      if (layoutKey === 'scenic-alabaster-gold') {
+        T = Object.assign({}, T, {
+          cardBg: 'rgba(255, 255, 255, 0.95)',
+          borderColor: 'rgba(15, 23, 42, 0.22)',
+          subtleLine: 'rgba(15, 23, 42, 0.12)',
+          badgeBg: 'rgba(217, 119, 6, 0.12)',
+          badgeBorder: 'rgba(217, 119, 6, 0.35)',
+          badgeText: '#92400E',
+          primaryGold: '#064E3B',    // Deep majestic emerald
+          secondaryGold: '#B45309',  // Deep warm amber
+          accentGold: '#0F172A',     // Crisp dark slate
+          textColor: '#0F172A',      // High contrast dark text
+          subTextColor: '#334155',   // Deep slate
+          highlightColor: '#064E3B', // Rich emerald
+          sunColor: '#D97706',
+          isDark: false
+        });
+      } else {
+        // scenic-kaaba-parchment
+        T = Object.assign({}, T, {
+          cardBg: 'rgba(255, 253, 247, 0.92)',
+          borderColor: 'rgba(109, 76, 39, 0.38)',
+          subtleLine: 'rgba(109, 76, 39, 0.18)',
+          badgeBg: 'rgba(109, 76, 39, 0.12)',
+          badgeBorder: 'rgba(109, 76, 39, 0.35)',
+          badgeText: '#4A3219',
+          primaryGold: '#6D4C27',
+          secondaryGold: '#8B6538',
+          accentGold: '#2B1A0E',
+          textColor: '#1A120B',
+          subTextColor: '#422814',
+          highlightColor: '#2B1A0E',
+          sunColor: '#B45309',
+          isDark: false
+        });
+      }
+    } else if (isDarkScenic) {
+      // Dark scenic canvas (mountains, desert stars, night sky, dusk, clouds, etc.)
+      // Always forces high-contrast glowing gold/white typography
       T = Object.assign({}, T, {
         cardBg: 'rgba(15, 23, 42, 0.72)',
         borderColor: 'rgba(255, 255, 255, 0.32)',
@@ -937,6 +928,24 @@
         highlightColor: '#FDE68A',
         sunColor: '#F59E0B',
         isDark: true
+      });
+    } else if (!T.isDark) {
+      // Architectural layouts with light themes (warm-parchment, classic-ivory)
+      T = Object.assign({}, T, {
+        cardBg: 'rgba(255, 255, 255, 0.95)',
+        borderColor: 'rgba(15, 23, 42, 0.22)',
+        subtleLine: 'rgba(15, 23, 42, 0.12)',
+        badgeBg: 'rgba(217, 119, 6, 0.12)',
+        badgeBorder: 'rgba(217, 119, 6, 0.35)',
+        badgeText: '#92400E',
+        primaryGold: themeKey === 'classic-ivory' ? '#064E3B' : '#78350F',
+        secondaryGold: '#92400E',
+        accentGold: '#0F172A',
+        textColor: '#0F172A',
+        subTextColor: '#334155',
+        highlightColor: themeKey === 'classic-ivory' ? '#064E3B' : '#78350F',
+        sunColor: '#D97706',
+        isDark: false
       });
     }
 
