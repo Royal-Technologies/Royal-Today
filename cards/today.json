@@ -1,42 +1,42 @@
 {
-  "cardId": "RT-20261106",
-  "date": "2026-11-06",
+  "cardId": "RT-20261107",
+  "date": "2026-11-07",
   "gregorian": {
-    "day": 6,
+    "day": 7,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 5,
-    "dayName": "শুক্রবার",
+    "dayOfWeek": 6,
+    "dayName": "শনিবার",
     "monthName": "নভেম্বর",
-    "formattedText": "০৬ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ শুক্রবার"
+    "formattedText": "০৭ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ শনিবার"
   },
   "bangla": {
-    "day": 21,
-    "dayBn": "২১",
+    "day": 22,
+    "dayBn": "২২",
     "month": "কার্তিক",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "২১ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "২২ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 25,
-    "dayBn": "২৫",
+    "day": 26,
+    "dayBn": "২৬",
     "month": "জমাদিউল আউয়াল",
     "monthIndex": 5,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "২৫ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
+    "formattedText": "২৬ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
     "sunrise": {
       "hours24": 6,
       "hours12": 6,
-      "mins": 7,
-      "timeFormattedBn": "৬:০৭"
+      "mins": 8,
+      "timeFormattedBn": "৬:০৮"
     },
     "sunset": {
       "hours24": 17,
@@ -44,16 +44,16 @@
       "mins": 17,
       "timeFormattedBn": "৫:১৭"
     },
-    "sunriseBn": "৬:০৭",
+    "sunriseBn": "৬:০৮",
     "sunsetBn": "৫:১৭",
-    "formattedLine": "সূর্যোদয়-৬:০৭ ও সূর্যাস্ত-৫:১৭(ঢাকা)"
+    "formattedLine": "সূর্যোদয়-৬:০৮ ও সূর্যাস্ত-৫:১৭(ঢাকা)"
   },
-  "theme": "classic-ivory",
-  "themeName": "শুভ্র মুক্তা আইভরি (Classic Pearl Ivory)",
-  "layout": "kiswah-gold-ribbon",
-  "layoutName": "১০. কাবার গিলাফ স্বর্ণসূত্র ফিতা (Kiswah Silk Ribbon)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শুক্রবার\n২৫ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২১ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n০৬ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:০৭ ও সূর্যাস্ত-৫:১৭(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "royal-emerald",
+  "themeName": "পান্না সবুজ (Royal Emerald)",
+  "layout": "scenic-mountain-twilight",
+  "layoutName": "১১. গোধূলি বেলার পাহাড় (Mountain Twilight)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শনিবার\n২৬ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২২ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n০৭ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:০৮ ও সূর্যাস্ত-৫:১৭(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261106.png",
-  "generatedAt": "2026-11-06T08:54:36.099Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261107.png",
+  "generatedAt": "2026-11-07T00:36:34.889Z"
 }
