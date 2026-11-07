@@ -1,34 +1,34 @@
 {
-  "cardId": "RT-20261107",
-  "date": "2026-11-07",
+  "cardId": "RT-20261108",
+  "date": "2026-11-08",
   "gregorian": {
-    "day": 7,
+    "day": 8,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 6,
-    "dayName": "শনিবার",
+    "dayOfWeek": 0,
+    "dayName": "রবিবার",
     "monthName": "নভেম্বর",
-    "formattedText": "০৭ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ শনিবার"
+    "formattedText": "০৮ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ রবিবার"
   },
   "bangla": {
-    "day": 22,
-    "dayBn": "২২",
+    "day": 23,
+    "dayBn": "২৩",
     "month": "কার্তিক",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "২২ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "২৩ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 26,
-    "dayBn": "২৬",
+    "day": 27,
+    "dayBn": "২৭",
     "month": "জমাদিউল আউয়াল",
     "monthIndex": 5,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "২৬ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
+    "formattedText": "২৭ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
@@ -41,19 +41,19 @@
     "sunset": {
       "hours24": 17,
       "hours12": 5,
-      "mins": 17,
-      "timeFormattedBn": "৫:১৭"
+      "mins": 16,
+      "timeFormattedBn": "৫:১৬"
     },
     "sunriseBn": "৬:০৮",
-    "sunsetBn": "৫:১৭",
-    "formattedLine": "সূর্যোদয়-৬:০৮ ও সূর্যাস্ত-৫:১৭(ঢাকা)"
+    "sunsetBn": "৫:১৬",
+    "formattedLine": "সূর্যোদয়-৬:০৮ ও সূর্যাস্ত-৫:১৬(ঢাকা)"
   },
-  "theme": "royal-emerald",
-  "themeName": "পান্না সবুজ (Royal Emerald)",
-  "layout": "scenic-mountain-twilight",
-  "layoutName": "১১. গোধূলি বেলার পাহাড় (Mountain Twilight)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শনিবার\n২৬ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২২ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n০৭ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:০৮ ও সূর্যাস্ত-৫:১৭(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "midnight-navy",
+  "themeName": "গভীর নীলকান্ত (Midnight Navy)",
+  "layout": "scenic-kaaba-parchment",
+  "layoutName": "১২. ভিন্টেজ কাবা পাণ্ডুলিপি (Kaaba Vintage Sketch)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ রবিবার\n২৭ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২৩ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n০৮ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:০৮ ও সূর্যাস্ত-৫:১৬(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261107.png",
-  "generatedAt": "2026-11-07T00:36:34.889Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261108.png",
+  "generatedAt": "2026-11-07T21:35:56.334Z"
 }
