@@ -1,6 +1,6 @@
 # ============================================================
 # Royal Today — Windows Task Scheduler Setup
-# Runs daily at 03:00 AM (রাত ৩:০০ টা) to generate today's card
+# Runs daily at 12:05 AM (রাত ১২:০৫ টা) to generate today's card
 # ============================================================
 
 $taskName = "RoyalToday_DailyGenerator"
@@ -28,8 +28,8 @@ Write-Host "Script Path: $scriptPath"
 # Action
 $action = New-ScheduledTaskAction -Execute $nodeExe -Argument "`"$scriptPath`"" -WorkingDirectory $projectDir
 
-# Trigger: Daily at 3:00 AM (বাংলাদেশ সময় রাত ৩:০০ টা)
-$trigger = New-ScheduledTaskTrigger -Daily -At "03:00AM"
+# Trigger: Daily at 12:05 AM (বাংলাদেশ সময় রাত ১২:০৫ টা)
+$trigger = New-ScheduledTaskTrigger -Daily -At "12:05AM"
 
 # Settings
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
