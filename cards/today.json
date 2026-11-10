@@ -1,34 +1,34 @@
 {
-  "cardId": "RT-20261109",
-  "date": "2026-11-09",
+  "cardId": "RT-20261110",
+  "date": "2026-11-10",
   "gregorian": {
-    "day": 9,
+    "day": 10,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 1,
-    "dayName": "সোমবার",
+    "dayOfWeek": 2,
+    "dayName": "মঙ্গলবার",
     "monthName": "নভেম্বর",
-    "formattedText": "০৯ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ সোমবার"
+    "formattedText": "১০ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ মঙ্গলবার"
   },
   "bangla": {
-    "day": 24,
-    "dayBn": "২৪",
+    "day": 25,
+    "dayBn": "২৫",
     "month": "কার্তিক",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "২৪ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "২৫ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 28,
-    "dayBn": "২৮",
+    "day": 29,
+    "dayBn": "২৯",
     "month": "জমাদিউল আউয়াল",
     "monthIndex": 5,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "২৮ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
+    "formattedText": "২৯ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
@@ -41,19 +41,19 @@
     "sunset": {
       "hours24": 17,
       "hours12": 5,
-      "mins": 16,
-      "timeFormattedBn": "৫:১৬"
+      "mins": 15,
+      "timeFormattedBn": "৫:১৫"
     },
     "sunriseBn": "৬:০৯",
-    "sunsetBn": "৫:১৬",
-    "formattedLine": "সূর্যোদয়-৬:০৯ ও সূর্যাস্ত-৫:১৬(ঢাকা)"
+    "sunsetBn": "৫:১৫",
+    "formattedLine": "সূর্যোদয়-৬:০৯ ও সূর্যাস্ত-৫:১৫(ঢাকা)"
   },
-  "theme": "imperial-black",
-  "themeName": "কাবার গিলাফ ও সোনা (Imperial Onyx)",
-  "layout": "scenic-rehal-quran",
-  "layoutName": "১৩. কাঠের রেহাল ও কোরআন (Rehal & Quran Studio)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ সোমবার\n২৮ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২৪ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n০৯ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:০৯ ও সূর্যাস্ত-৫:১৬(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "warm-parchment",
+  "themeName": "মদিনা পাণ্ডুলিপি (Illuminated Parchment)",
+  "layout": "scenic-desert-stars",
+  "layoutName": "১৪. তারকাময় মরুভূমি (Desert Dunes & Stars)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ মঙ্গলবার\n২৯ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২৫ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১০ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:০৯ ও সূর্যাস্ত-৫:১৫(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261109.png",
-  "generatedAt": "2026-11-08T21:50:09.210Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261110.png",
+  "generatedAt": "2026-11-10T01:18:30.337Z"
 }
