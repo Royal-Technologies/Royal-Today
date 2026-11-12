@@ -1,42 +1,42 @@
 {
-  "cardId": "RT-20261111",
-  "date": "2026-11-11",
+  "cardId": "RT-20261112",
+  "date": "2026-11-12",
   "gregorian": {
-    "day": 11,
+    "day": 12,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 3,
-    "dayName": "বুধবার",
+    "dayOfWeek": 4,
+    "dayName": "বৃহস্পতিবার",
     "monthName": "নভেম্বর",
-    "formattedText": "১১ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ বুধবার"
+    "formattedText": "১২ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ বৃহস্পতিবার"
   },
   "bangla": {
-    "day": 26,
-    "dayBn": "২৬",
+    "day": 27,
+    "dayBn": "২৭",
     "month": "কার্তিক",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "২৬ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "২৭ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 30,
-    "dayBn": "৩০",
-    "month": "জমাদিউল আউয়াল",
-    "monthIndex": 5,
+    "day": 1,
+    "dayBn": "১",
+    "month": "জমাদিউস সানি",
+    "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "৩০ জমাদিউল আউয়াল ১৪৪৮ হিজরী"
+    "formattedText": "১ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
     "sunrise": {
       "hours24": 6,
       "hours12": 6,
-      "mins": 10,
-      "timeFormattedBn": "৬:১০"
+      "mins": 11,
+      "timeFormattedBn": "৬:১১"
     },
     "sunset": {
       "hours24": 17,
@@ -44,16 +44,16 @@
       "mins": 15,
       "timeFormattedBn": "৫:১৫"
     },
-    "sunriseBn": "৬:১০",
+    "sunriseBn": "৬:১১",
     "sunsetBn": "৫:১৫",
-    "formattedLine": "সূর্যোদয়-৬:১০ ও সূর্যাস্ত-৫:১৫(ঢাকা)"
+    "formattedLine": "সূর্যোদয়-৬:১১ ও সূর্যাস্ত-৫:১৫(ঢাকা)"
   },
-  "theme": "royal-maroon",
-  "themeName": "দামেস্ক মেরুন (Damascus Crimson)",
-  "layout": "scenic-golden-clouds",
-  "layoutName": "১৫. সোনালী সূর্যাস্ত মেঘমালা (Golden Sunset Clouds)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ বুধবার\n৩০ জমাদিউল আউয়াল ১৪৪৮ হিজরী\n২৬ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১১ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১০ ও সূর্যাস্ত-৫:১৫(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "ottoman-turquoise",
+  "themeName": "অটোমান ফিরোজা (Ottoman Turquoise)",
+  "layout": "scenic-mosque-dusk",
+  "layoutName": "১৬. গোধূলি মসজিদ গম্বুজ (Mosque Dome at Dusk)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ বৃহস্পতিবার\n১ জমাদিউস সানি ১৪৪৮ হিজরী\n২৭ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১২ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১১ ও সূর্যাস্ত-৫:১৫(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261111.png",
-  "generatedAt": "2026-11-10T22:57:43.436Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261112.png",
+  "generatedAt": "2026-11-12T00:13:33.737Z"
 }
