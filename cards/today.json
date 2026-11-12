@@ -1,34 +1,34 @@
 {
-  "cardId": "RT-20261112",
-  "date": "2026-11-12",
+  "cardId": "RT-20261113",
+  "date": "2026-11-13",
   "gregorian": {
-    "day": 12,
+    "day": 13,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 4,
-    "dayName": "বৃহস্পতিবার",
+    "dayOfWeek": 5,
+    "dayName": "শুক্রবার",
     "monthName": "নভেম্বর",
-    "formattedText": "১২ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ বৃহস্পতিবার"
+    "formattedText": "১৩ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ শুক্রবার"
   },
   "bangla": {
-    "day": 27,
-    "dayBn": "২৭",
+    "day": 28,
+    "dayBn": "২৮",
     "month": "কার্তিক",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "২৭ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "২৮ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 1,
-    "dayBn": "১",
+    "day": 2,
+    "dayBn": "২",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "১ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "২ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
@@ -41,19 +41,19 @@
     "sunset": {
       "hours24": 17,
       "hours12": 5,
-      "mins": 15,
-      "timeFormattedBn": "৫:১৫"
+      "mins": 14,
+      "timeFormattedBn": "৫:১৪"
     },
     "sunriseBn": "৬:১১",
-    "sunsetBn": "৫:১৫",
-    "formattedLine": "সূর্যোদয়-৬:১১ ও সূর্যাস্ত-৫:১৫(ঢাকা)"
+    "sunsetBn": "৫:১৪",
+    "formattedLine": "সূর্যোদয়-৬:১১ ও সূর্যাস্ত-৫:১৪(ঢাকা)"
   },
-  "theme": "ottoman-turquoise",
-  "themeName": "অটোমান ফিরোজা (Ottoman Turquoise)",
-  "layout": "scenic-mosque-dusk",
-  "layoutName": "১৬. গোধূলি মসজিদ গম্বুজ (Mosque Dome at Dusk)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ বৃহস্পতিবার\n১ জমাদিউস সানি ১৪৪৮ হিজরী\n২৭ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১২ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১১ ও সূর্যাস্ত-৫:১৫(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "desert-amber",
+  "themeName": "মরু জাফরান ও অ্যাম্বার (Hijaz Amber)",
+  "layout": "scenic-medina-sanctuary",
+  "layoutName": "১৭. মদিনার শ্যামলিম প্রাঙ্গণ (Medina Emerald Sanctuary)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শুক্রবার\n২ জমাদিউস সানি ১৪৪৮ হিজরী\n২৮ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১৩ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১১ ও সূর্যাস্ত-৫:১৪(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261112.png",
-  "generatedAt": "2026-11-12T00:13:33.737Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261113.png",
+  "generatedAt": "2026-11-12T23:19:38.862Z"
 }
