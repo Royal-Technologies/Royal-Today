@@ -1,59 +1,59 @@
 {
-  "cardId": "RT-20261114",
-  "date": "2026-11-14",
+  "cardId": "RT-20261115",
+  "date": "2026-11-15",
   "gregorian": {
-    "day": 14,
+    "day": 15,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 6,
-    "dayName": "শনিবার",
+    "dayOfWeek": 0,
+    "dayName": "রবিবার",
     "monthName": "নভেম্বর",
-    "formattedText": "১৪ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ শনিবার"
+    "formattedText": "১৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ রবিবার"
   },
   "bangla": {
-    "day": 29,
-    "dayBn": "২৯",
+    "day": 30,
+    "dayBn": "৩০",
     "month": "কার্তিক",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "২৯ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "৩০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 3,
-    "dayBn": "৩",
+    "day": 4,
+    "dayBn": "৪",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "৩ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "৪ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
     "sunrise": {
       "hours24": 6,
       "hours12": 6,
-      "mins": 12,
-      "timeFormattedBn": "৬:১২"
+      "mins": 13,
+      "timeFormattedBn": "৬:১৩"
     },
     "sunset": {
       "hours24": 17,
       "hours12": 5,
-      "mins": 14,
-      "timeFormattedBn": "৫:১৪"
+      "mins": 13,
+      "timeFormattedBn": "৫:১৩"
     },
-    "sunriseBn": "৬:১২",
-    "sunsetBn": "৫:১৪",
-    "formattedLine": "সূর্যোদয়-৬:১২ ও সূর্যাস্ত-৫:১৪(ঢাকা)"
+    "sunriseBn": "৬:১৩",
+    "sunsetBn": "৫:১৩",
+    "formattedLine": "সূর্যোদয়-৬:১৩ ও সূর্যাস্ত-৫:১৩(ঢাকা)"
   },
-  "theme": "amethyst-violet",
-  "themeName": "রাজকীয় বেগুনি (Royal Amethyst)",
-  "layout": "scenic-alabaster-gold",
-  "layoutName": "১৮. শুভ্র আইভরি ও সোনা (Alabaster Minimal Gold)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শনিবার\n৩ জমাদিউস সানি ১৪৪৮ হিজরী\n২৯ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১৪ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১২ ও সূর্যাস্ত-৫:১৪(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "andalusian-olive",
+  "themeName": "আন্দালুসীয় অলিভ (Moorish Olive)",
+  "layout": "scenic-crimson-horizon",
+  "layoutName": "১৯. রক্তিম দামেস্ক দিগন্ত (Crimson Dusk Horizon)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ রবিবার\n৪ জমাদিউস সানি ১৪৪৮ হিজরী\n৩০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৩ ও সূর্যাস্ত-৫:১৩(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261114.png",
-  "generatedAt": "2026-11-13T23:22:49.678Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261115.png",
+  "generatedAt": "2026-11-14T22:05:58.164Z"
 }
