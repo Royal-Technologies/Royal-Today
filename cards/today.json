@@ -1,34 +1,34 @@
 {
-  "cardId": "RT-20261115",
-  "date": "2026-11-15",
+  "cardId": "RT-20261116",
+  "date": "2026-11-16",
   "gregorian": {
-    "day": 15,
+    "day": 16,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 0,
-    "dayName": "রবিবার",
+    "dayOfWeek": 1,
+    "dayName": "সোমবার",
     "monthName": "নভেম্বর",
-    "formattedText": "১৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ রবিবার"
+    "formattedText": "১৬ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ সোমবার"
   },
   "bangla": {
-    "day": 30,
-    "dayBn": "৩০",
-    "month": "কার্তিক",
+    "day": 1,
+    "dayBn": "১",
+    "month": "অগ্রহায়ণ",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "৩০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "১ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 4,
-    "dayBn": "৪",
+    "day": 5,
+    "dayBn": "৫",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "৪ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "৫ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
@@ -48,12 +48,12 @@
     "sunsetBn": "৫:১৩",
     "formattedLine": "সূর্যোদয়-৬:১৩ ও সূর্যাস্ত-৫:১৩(ঢাকা)"
   },
-  "theme": "andalusian-olive",
-  "themeName": "আন্দালুসীয় অলিভ (Moorish Olive)",
-  "layout": "scenic-crimson-horizon",
-  "layoutName": "১৯. রক্তিম দামেস্ক দিগন্ত (Crimson Dusk Horizon)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ রবিবার\n৪ জমাদিউস সানি ১৪৪৮ হিজরী\n৩০ এ কার্তিক ১৪৩৩ বঙ্গাব্দ\n১৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৩ ও সূর্যাস্ত-৫:১৩(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "classic-ivory",
+  "themeName": "শুভ্র মুক্তা আইভরি (Classic Pearl Ivory)",
+  "layout": "scenic-kiswah-night",
+  "layoutName": "২০. কাবার কালো রেশম (Kiswah Midnight Silk)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ সোমবার\n৫ জমাদিউস সানি ১৪৪৮ হিজরী\n১ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n১৬ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৩ ও সূর্যাস্ত-৫:১৩(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261115.png",
-  "generatedAt": "2026-11-14T22:05:58.164Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261116.png",
+  "generatedAt": "2026-11-15T22:36:32.528Z"
 }
