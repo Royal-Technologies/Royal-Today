@@ -1,42 +1,42 @@
 {
-  "cardId": "RT-20261122",
-  "date": "2026-11-22",
+  "cardId": "RT-20261123",
+  "date": "2026-11-23",
   "gregorian": {
-    "day": 22,
+    "day": 23,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 0,
-    "dayName": "রবিবার",
+    "dayOfWeek": 1,
+    "dayName": "সোমবার",
     "monthName": "নভেম্বর",
-    "formattedText": "২২ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ রবিবার"
+    "formattedText": "২৩ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ সোমবার"
   },
   "bangla": {
-    "day": 7,
-    "dayBn": "৭",
+    "day": 8,
+    "dayBn": "৮",
     "month": "অগ্রহায়ণ",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "৭ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "৮ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 11,
-    "dayBn": "১১",
+    "day": 12,
+    "dayBn": "১২",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "১১ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "১২ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
     "sunrise": {
       "hours24": 6,
       "hours12": 6,
-      "mins": 17,
-      "timeFormattedBn": "৬:১৭"
+      "mins": 18,
+      "timeFormattedBn": "৬:১৮"
     },
     "sunset": {
       "hours24": 17,
@@ -44,16 +44,16 @@
       "mins": 12,
       "timeFormattedBn": "৫:১২"
     },
-    "sunriseBn": "৬:১৭",
+    "sunriseBn": "৬:১৮",
     "sunsetBn": "৫:১২",
-    "formattedLine": "সূর্যোদয়-৬:১৭ ও সূর্যাস্ত-৫:১২(ঢাকা)"
+    "formattedLine": "সূর্যোদয়-৬:১৮ ও সূর্যাস্ত-৫:১২(ঢাকা)"
   },
-  "theme": "ottoman-turquoise",
-  "themeName": "অটোমান ফিরোজা (Ottoman Turquoise)",
-  "layout": "architectural-pillars",
-  "layoutName": "৬. রাজকীয় স্তম্ভ ও তোরণ (Royal Twin Pillars)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ রবিবার\n১১ জমাদিউস সানি ১৪৪৮ হিজরী\n৭ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২২ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৭ ও সূর্যাস্ত-৫:১২(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "desert-amber",
+  "themeName": "মরু জাফরান ও অ্যাম্বার (Hijaz Amber)",
+  "layout": "celestial-crescent",
+  "layoutName": "৭. হিলাল ও সেলিস্টিয়াল গ্যালাক্সি (Celestial Crescent)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ সোমবার\n১২ জমাদিউস সানি ১৪৪৮ হিজরী\n৮ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৩ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৮ ও সূর্যাস্ত-৫:১২(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261122.png",
-  "generatedAt": "2026-11-21T22:53:53.070Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261123.png",
+  "generatedAt": "2026-11-22T23:23:09.473Z"
 }
