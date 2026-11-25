@@ -1,34 +1,34 @@
 {
-  "cardId": "RT-20261124",
-  "date": "2026-11-24",
+  "cardId": "RT-20261125",
+  "date": "2026-11-25",
   "gregorian": {
-    "day": 24,
+    "day": 25,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 2,
-    "dayName": "মঙ্গলবার",
+    "dayOfWeek": 3,
+    "dayName": "বুধবার",
     "monthName": "নভেম্বর",
-    "formattedText": "২৪ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ মঙ্গলবার"
+    "formattedText": "২৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ বুধবার"
   },
   "bangla": {
-    "day": 9,
-    "dayBn": "৯",
+    "day": 10,
+    "dayBn": "১০",
     "month": "অগ্রহায়ণ",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "৯ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "১০ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 13,
-    "dayBn": "১৩",
+    "day": 14,
+    "dayBn": "১৪",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "১৩ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "১৪ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
@@ -48,12 +48,12 @@
     "sunsetBn": "৫:১১",
     "formattedLine": "সূর্যোদয়-৬:১৯ ও সূর্যাস্ত-৫:১১(ঢাকা)"
   },
-  "theme": "amethyst-violet",
-  "themeName": "রাজকীয় বেগুনি (Royal Amethyst)",
-  "layout": "alhambra-palace",
-  "layoutName": "৮. আন্দালুসীয় আলহামব্রা (Alhambra Arabesque)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ মঙ্গলবার\n১৩ জমাদিউস সানি ১৪৪৮ হিজরী\n৯ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৪ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৯ ও সূর্যাস্ত-৫:১১(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "andalusian-olive",
+  "themeName": "আন্দালুসীয় অলিভ (Moorish Olive)",
+  "layout": "octagram-medallion",
+  "layoutName": "৯. আটকোণা মেডেলিয়ন (Rub el Hizb Seal)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ বুধবার\n১৪ জমাদিউস সানি ১৪৪৮ হিজরী\n১০ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৯ ও সূর্যাস্ত-৫:১১(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261124.png",
-  "generatedAt": "2026-11-24T03:53:09.336Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261125.png",
+  "generatedAt": "2026-11-25T01:59:47.879Z"
 }
