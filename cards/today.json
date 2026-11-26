@@ -1,42 +1,42 @@
 {
-  "cardId": "RT-20261125",
-  "date": "2026-11-25",
+  "cardId": "RT-20261126",
+  "date": "2026-11-26",
   "gregorian": {
-    "day": 25,
+    "day": 26,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 3,
-    "dayName": "বুধবার",
+    "dayOfWeek": 4,
+    "dayName": "বৃহস্পতিবার",
     "monthName": "নভেম্বর",
-    "formattedText": "২৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ বুধবার"
+    "formattedText": "২৬ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ বৃহস্পতিবার"
   },
   "bangla": {
-    "day": 10,
-    "dayBn": "১০",
+    "day": 11,
+    "dayBn": "১১",
     "month": "অগ্রহায়ণ",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "১০ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "১১ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 14,
-    "dayBn": "১৪",
+    "day": 15,
+    "dayBn": "১৫",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "১৪ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "১৫ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
     "sunrise": {
       "hours24": 6,
       "hours12": 6,
-      "mins": 19,
-      "timeFormattedBn": "৬:১৯"
+      "mins": 20,
+      "timeFormattedBn": "৬:২০"
     },
     "sunset": {
       "hours24": 17,
@@ -44,16 +44,16 @@
       "mins": 11,
       "timeFormattedBn": "৫:১১"
     },
-    "sunriseBn": "৬:১৯",
+    "sunriseBn": "৬:২০",
     "sunsetBn": "৫:১১",
-    "formattedLine": "সূর্যোদয়-৬:১৯ ও সূর্যাস্ত-৫:১১(ঢাকা)"
+    "formattedLine": "সূর্যোদয়-৬:২০ ও সূর্যাস্ত-৫:১১(ঢাকা)"
   },
-  "theme": "andalusian-olive",
-  "themeName": "আন্দালুসীয় অলিভ (Moorish Olive)",
-  "layout": "octagram-medallion",
-  "layoutName": "৯. আটকোণা মেডেলিয়ন (Rub el Hizb Seal)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ বুধবার\n১৪ জমাদিউস সানি ১৪৪৮ হিজরী\n১০ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৫ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:১৯ ও সূর্যাস্ত-৫:১১(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "classic-ivory",
+  "themeName": "শুভ্র মুক্তা আইভরি (Classic Pearl Ivory)",
+  "layout": "kiswah-gold-ribbon",
+  "layoutName": "১০. কাবার গিলাফ স্বর্ণসূত্র ফিতা (Kiswah Silk Ribbon)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ বৃহস্পতিবার\n১৫ জমাদিউস সানি ১৪৪৮ হিজরী\n১১ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৬ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:২০ ও সূর্যাস্ত-৫:১১(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261125.png",
-  "generatedAt": "2026-11-25T01:59:47.879Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261126.png",
+  "generatedAt": "2026-11-26T01:41:06.279Z"
 }
