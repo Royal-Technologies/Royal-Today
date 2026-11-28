@@ -1,42 +1,42 @@
 {
-  "cardId": "RT-20261127",
-  "date": "2026-11-27",
+  "cardId": "RT-20261128",
+  "date": "2026-11-28",
   "gregorian": {
-    "day": 27,
+    "day": 28,
     "month": 11,
     "year": 2026,
-    "dayOfWeek": 5,
-    "dayName": "শুক্রবার",
+    "dayOfWeek": 6,
+    "dayName": "শনিবার",
     "monthName": "নভেম্বর",
-    "formattedText": "২৭ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
-    "todayLine": "আজ শুক্রবার"
+    "formattedText": "২৮ নভেম্বর ২০২৬ খ্রীষ্টাব্দ",
+    "todayLine": "আজ শনিবার"
   },
   "bangla": {
-    "day": 12,
-    "dayBn": "১২",
+    "day": 13,
+    "dayBn": "১৩",
     "month": "অগ্রহায়ণ",
     "year": 1433,
     "yearBn": "১৪৩৩",
     "season": "হেমন্তকাল",
     "seasonLine": "এখন হেমন্তকাল",
-    "formattedText": "১২ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
+    "formattedText": "১৩ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ"
   },
   "hijri": {
-    "day": 16,
-    "dayBn": "১৬",
+    "day": 17,
+    "dayBn": "১৭",
     "month": "জমাদিউস সানি",
     "monthIndex": 6,
     "year": 1448,
     "yearBn": "১৪৪৮",
-    "formattedText": "১৬ জমাদিউস সানি ১৪৪৮ হিজরী"
+    "formattedText": "১৭ জমাদিউস সানি ১৪৪৮ হিজরী"
   },
   "sun": {
     "district": "ঢাকা",
     "sunrise": {
       "hours24": 6,
       "hours12": 6,
-      "mins": 21,
-      "timeFormattedBn": "৬:২১"
+      "mins": 22,
+      "timeFormattedBn": "৬:২২"
     },
     "sunset": {
       "hours24": 17,
@@ -44,16 +44,16 @@
       "mins": 11,
       "timeFormattedBn": "৫:১১"
     },
-    "sunriseBn": "৬:২১",
+    "sunriseBn": "৬:২২",
     "sunsetBn": "৫:১১",
-    "formattedLine": "সূর্যোদয়-৬:২১ ও সূর্যাস্ত-৫:১১(ঢাকা)"
+    "formattedLine": "সূর্যোদয়-৬:২২ ও সূর্যাস্ত-৫:১১(ঢাকা)"
   },
-  "theme": "royal-emerald",
-  "themeName": "পান্না সবুজ (Royal Emerald)",
-  "layout": "scenic-mountain-twilight",
-  "layoutName": "১১. গোধূলি বেলার পাহাড় (Mountain Twilight)",
-  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শুক্রবার\n১৬ জমাদিউস সানি ১৪৪৮ হিজরী\n১২ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৭ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:২১ ও সূর্যাস্ত-৫:১১(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
+  "theme": "midnight-navy",
+  "themeName": "গভীর নীলকান্ত (Midnight Navy)",
+  "layout": "scenic-kaaba-parchment",
+  "layoutName": "১২. ভিন্টেজ কাবা পাণ্ডুলিপি (Kaaba Vintage Sketch)",
+  "caption": "আসসালামুআলাইকুম\nশুভ সকাল\n\nআজ শনিবার\n১৭ জমাদিউস সানি ১৪৪৮ হিজরী\n১৩ এ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ\n২৮ নভেম্বর ২০২৬ খ্রীষ্টাব্দ\nসূর্যোদয়-৬:২২ ও সূর্যাস্ত-৫:১১(ঢাকা)\nএখন হেমন্তকাল\n\nসময়মত নামাজ পড়ুন\nসর্বদা আল্লাহকে স্মরণ করুন\nআনন্দময় কাটুক আপনার সারাদিন।\n\n#RoyalToday #SubhoSokal #BanglaCalendar #HijriCalendar #SunriseSunset #Dhaka #Bangladesh #RoyalTechnologies",
   "imageUrl": "https://royal-technologies.github.io/Royal-Today/cards/today.png",
-  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261127.png",
-  "generatedAt": "2026-11-27T01:34:13.609Z"
+  "archiveUrl": "https://royal-technologies.github.io/Royal-Today/cards/RT-20261128.png",
+  "generatedAt": "2026-11-28T01:14:49.966Z"
 }
